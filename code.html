@@ -126,6 +126,22 @@
             border-style: solid;
             border-color: white transparent transparent;
         }
+        .speech-bubble-top-left {
+            background: white;
+            border-radius: 20px;
+            padding: 8px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .speech-bubble-top-left::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 18px;
+            border-width: 0 8px 8px 8px;
+            border-style: solid;
+            border-color: transparent transparent white transparent;
+        }
         @keyframes spin-slow {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -176,7 +192,7 @@
 <div class="aspect-[4/5] rounded-sm overflow-hidden relative group">
 <img alt="Nguyễn Thị Hương Graduation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwKSmKXd-1eHaHosrVBCFAzIgU5wM0I5rk6E_tP3z5cpvD06MNAoVPrTcrQmEo0uGIa9e_lB8DxBdLMy7LkDgM_K27IbxTcczRnwhb3zDmgbknfL-rxpghPIUfhYXVx48PWhrJbO_vHRXEyypNyWi1iS7PwVgXlda1Jt2L6kzUcnALmz4BchLQsbkgNBvXMiQ4Pq_bmrTyu_OFV7Fe2MlISxn9IZVuDV6MAsvwYDpjV8QUBPfLOd5qgRxmEiObPoXOww"/>
 <!-- Speech Bubble Tag -->
-<div class="absolute bottom-6 right-6 speech-bubble-tag">
+<div class="absolute bottom-6 right-6 speech-bubble-top-left">
 <span class="font-headline-sm text-primary text-lg">Nguyễn Thị Hương</span>
 </div>
 </div>
@@ -465,21 +481,25 @@ class="w-full h-full object-cover">
 <section class="mt-8 mb-12 max-w-3xl mx-auto px-4 reveal-on-scroll">
 <div class="bg-white/90 backdrop-blur-md rounded-3xl border border-white p-8 md:p-12 shadow-2xl relative overflow-hidden text-center">
 <!-- Subtle Background Watermark -->
-<div class="absolute -right-12 -top-12 text-primary-container/10 pointer-events-none">
-<span class="material-symbols-outlined text-[180px]">favorite</span>
+<div class="absolute -right-12 -top-12 text-rose-300/25 pointer-events-none">
+<span class="material-symbols-outlined text-[180px]">local_florist</span>
 </div>
-<div class="absolute -left-12 -bottom-12 text-secondary-container/10 pointer-events-none">
+<div class="absolute -left-12 -bottom-12 text-amber-300/25 pointer-events-none">
 <span class="material-symbols-outlined text-[180px]">filter_vintage</span>
 </div>
 <div class="relative z-10 flex flex-col items-center">
 <!-- Floral Badge -->
-<div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-container/30 text-primary mb-4 shadow-sm">
-<span class="material-symbols-outlined text-2xl">favorite</span>
+<div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-rose-50 border border-rose-200 text-rose-500 mb-4 shadow-md">
+<span class="material-symbols-outlined text-3xl animate-pulse">local_florist</span>
 </div>
-<span class="font-label-caps text-[11px] text-on-surface-variant tracking-[0.3em] uppercase mb-2">Lời Cảm Ơn Chân Thành</span>
-<h3 class="font-headline-md text-primary text-3xl md:text-4xl mb-6">Trân Trọng &amp; Tri Ân</h3>
+<span class="font-label-caps text-[11px] text-rose-600 tracking-[0.3em] uppercase mb-2 font-semibold">Lời Cảm Ơn Chân Thành</span>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-rose-400 text-xl">filter_vintage</span>
+<h3 class="font-headline-md text-primary text-3xl md:text-4xl">Trân Trọng &amp; Tri Ân</h3>
+<span class="material-symbols-outlined text-rose-400 text-xl">filter_vintage</span>
+</div>
 <!-- Divider -->
-<div class="w-16 h-[1.5px] bg-primary/25 mb-8"></div>
+<div class="w-20 h-[2px] bg-gradient-to-r from-transparent via-rose-400 to-transparent mb-8"></div>
 <!-- Message Body -->
 <div class="font-body-lg text-on-surface-variant leading-relaxed space-y-4 max-w-xl mx-auto text-base md:text-lg">
 <p>
