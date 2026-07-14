@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 
-<html class="light overflow-x-hidden w-full" lang="vi"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Sans+3:wght@400;600&amp;family=Montserrat:wght@600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="light overflow-x-hidden w-full" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Sans+3:wght@400;600&amp;family=Montserrat:wght@600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         try {
             tailwind.config = {
                 darkMode: "class",
@@ -77,46 +83,50 @@
                             "display-lg-mobile": ["Playfair Display"]
                         },
                         "fontSize": {
-                            "italic-accent": ["20px", {"lineHeight": "28px", "fontWeight": "400"}],
-                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
-                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                            "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                            "italic-accent": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                            "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                            "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                            "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                            "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                            "display-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
                         }
                     },
                 },
             }
-        } catch (_e) {}
+        } catch (_e) { }
     </script>
-<style>
+    <style>
         .polaroid-frame {
             background-color: white;
             padding: 12px 12px 32px 12px;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
             border-radius: 4px;
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
+
         .paper-texture {
             background-color: #fbf9f8;
             background-image: url("https://www.transparenttextures.com/patterns/felt.png");
         }
+
         .washi-tape {
             background: rgba(244, 194, 194, 0.8);
             backdrop-filter: blur(2px);
             padding: 4px 12px;
             transform: rotate(-2deg);
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
         }
+
         .speech-bubble-tag {
             background: white;
             border-radius: 20px;
             padding: 8px 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             position: relative;
         }
+
         .speech-bubble-tag::after {
             content: '';
             position: absolute;
@@ -126,13 +136,15 @@
             border-style: solid;
             border-color: white transparent transparent;
         }
+
         .speech-bubble-top-left {
             background: white;
             border-radius: 20px;
             padding: 8px 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             position: relative;
         }
+
         .speech-bubble-top-left::after {
             content: '';
             position: absolute;
@@ -142,16 +154,25 @@
             border-style: solid;
             border-color: transparent transparent white transparent;
         }
+
         @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
+
         .animate-spin-slow {
             animation: spin-slow 15s linear infinite;
         }
+
         .spin-paused {
             animation-play-state: paused !important;
         }
+
         /* Scroll-triggered Slide-in & Fade-in Animations */
         .reveal-on-scroll {
             opacity: 0;
@@ -159,17 +180,22 @@
             transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: opacity, transform;
         }
+
         .reveal-on-scroll.reveal-left {
             transform: translateX(-42px);
         }
+
         .reveal-on-scroll.reveal-right {
             transform: translateX(42px);
         }
+
         .reveal-on-scroll.is-revealed {
             opacity: 1;
             transform: translate(0, 0);
         }
-        html, body {
+
+        html,
+        body {
             overflow-x: hidden !important;
             width: 100% !important;
             max-width: 100% !important;
@@ -177,654 +203,1024 @@
             margin: 0;
             padding: 0;
         }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            90% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .petal {
+            position: absolute;
+            pointer-events: none;
+            animation: float 10s linear infinite;
+        }
+
+        .envelope-container {
+            perspective: 1500px;
+            transform-style: preserve-3d;
+        }
+
+        .envelope-flap {
+            transform-origin: top;
+            transform: rotateX(0deg);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 30;
+        }
+
+        .envelope-open .envelope-flap {
+            transform: rotateX(180deg);
+        }
+
+        .gold-edge {
+            box-shadow: 0 0 0 1px #e28b8b, inset 0 0 0 1px #e28b8b;
+        }
+
+        .wax-seal {
+            background: radial-gradient(circle at 30% 30%, #ecbaba, #7b5455);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), inset -1px -1px 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .calligraphy {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
     </style>
 </head>
-<body class="paper-texture text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden relative w-full max-w-full min-h-screen">
-<div class="w-full max-w-full overflow-x-hidden relative flex flex-col min-h-screen">
-<main class="max-w-[1140px] w-full mx-auto px-4 sm:px-6 lg:px-8 pb-6 relative overflow-x-clip">
-<!-- Hero Title Section -->
-<section class="mt-16 mb-section-gap relative">
-<div class="max-w-2xl mx-auto relative">
-<div class="absolute -top-12 left-0 font-label-caps text-primary/40 tracking-[0.3em] text-[10px]">HAPPY</div>
-<div class="absolute -top-12 right-0 font-label-caps text-primary/40 tracking-[0.3em] text-[10px]">GRADUATION</div>
-<!-- Main Polaroid -->
-<div class="bg-white p-6 pb-16 rounded-sm shadow-2xl relative z-10 border border-outline-variant/10 reveal-on-scroll" data-delay="0">
-<div class="aspect-[4/5] rounded-sm overflow-hidden relative group">
-<img alt="Nguyễn Thị Hương Graduation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwKSmKXd-1eHaHosrVBCFAzIgU5wM0I5rk6E_tP3z5cpvD06MNAoVPrTcrQmEo0uGIa9e_lB8DxBdLMy7LkDgM_K27IbxTcczRnwhb3zDmgbknfL-rxpghPIUfhYXVx48PWhrJbO_vHRXEyypNyWi1iS7PwVgXlda1Jt2L6kzUcnALmz4BchLQsbkgNBvXMiQ4Pq_bmrTyu_OFV7Fe2MlISxn9IZVuDV6MAsvwYDpjV8QUBPfLOd5qgRxmEiObPoXOww"/>
-<!-- Speech Bubble Tag -->
-<div class="absolute bottom-6 right-6 speech-bubble-top-left">
-<span class="font-headline-sm text-primary text-lg">Nguyễn Thị Hương</span>
-</div>
-</div>
-<!-- Decorative Elements -->
-<div class="absolute -left-10 -bottom-6 text-primary-container/60 scale-150 animate-pulse">
-<span class="material-symbols-outlined text-6xl">filter_vintage</span>
-</div>
-<div class="absolute -right-8 top-12 text-secondary-fixed-dim/40 scale-125">
-<span class="material-symbols-outlined text-5xl">auto_awesome</span>
-</div>
-<!-- Hero Title Text -->
-<div class="mt-12 text-center space-y-2">
-<p class="font-italic-accent text-secondary italic">Thư Mời Tham Dự</p>
-<h2 class="font-display-lg text-primary uppercase leading-none">BUỔI LỄ TỐT NGHIỆP</h2>
-<div class="flex justify-center gap-1 text-secondary-fixed-dim/60">
-<span class="material-symbols-outlined text-sm">sparkles</span>
-<span class="material-symbols-outlined text-sm">sparkles</span>
-<span class="material-symbols-outlined text-sm">sparkles</span>
-</div>
-</div>
-</div>
-</section>
-<!-- 1. Hero Masonry Grid (Key Highlights) -->
-<section class="mb-section-gap relative overflow-x-clip">
-<div class="absolute -left-20 top-0 text-primary-container/20 -z-10">
-<span class="material-symbols-outlined text-[120px]">filter_vintage</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-<div class="col-span-2 row-span-2 group">
-<div class="polaroid-frame h-full transition-transform hover:-rotate-1 duration-300 reveal-on-scroll" data-delay="0">
-<div class="aspect-[4/5] md:aspect-auto md:h-full overflow-hidden rounded-sm">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc1DbsUeGQBQtvi0jxrbK2uL-_kfFJ8-g7WCaxMy-CWuLbY20gb9aX2IcBKR2gfp3XDn1nZjO76HtVY5QZ-VHbVepj8a_Xq8ibEib_byVSbWyBq1YXC1VxljhsTPh2zNX_u88QSVTR7iimDf4DBkD2ZmU8MnocUepb_seWn4080TSxyIq3d47WaI88ecB4LO3Y-hsTLmrAlNQTNA-TDLg21baqNJX1TuXX7PKDACR4bCrZKoMgrrPf"/>
-</div>
-<div class="mt-4 flex items-center gap-2">
-<div class="washi-tape text-[10px] font-label-caps text-primary">KHOẢNH KHẮC</div>
-</div>
-</div>
-</div>
-<div class="col-span-1 group">
-<div class="polaroid-frame transition-transform hover:rotate-2 duration-300 reveal-on-scroll" data-delay="180">
-<div class="aspect-[3/4] overflow-hidden rounded-sm">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu92zqMFecDjUKfVy4KCvSBrI-i9Vxml2O9VFWoSRfuE2zNdB5oRASIlsZS9vTVwJoTDONN41oXt9U7oV6VZAysajCNqYH21iLiJCTIvoQEvKHucxmEehZuIYYn9-cCZgt9f9gxnfDmWseeaXPGsXMKuQR2NT7f57187SHRI_elcXwKX67oMEy5uLwT9fRs9bNOYy7D-K2VzUDeW0fUkznHAAooOUNWKBSTr8nfn1dnq3YeBTSHpO7"/>
-</div>
-</div>
-</div>
-<div class="col-span-1 group">
-<div class="polaroid-frame transition-transform hover:-rotate-2 duration-300 reveal-on-scroll" data-delay="350">
-<div class="aspect-[3/4] overflow-hidden rounded-sm">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb4Pf5_z-Lfc67t__BYGqPsm_tKz3UR5fB67IHgQ2qWilGLnyTI83ctTToJyE66yl6d0vMDOMR1Tm9jxjDrV6ls96zjl82Ae8tQFKLwcyzor0YEpv9wjlvCxecphzGk_YNl01NmBZsGTWWON9g9FIdPJgRiCODaulFUZb-FWDNruymBPXnn45oJfN5ru0kzSNKv9DNm45tq1xre03jWy6JHH4OHSgJk9F_wXADee8Ay3uwfBOMH2_H"/>
-</div>
-</div>
-</div>
-<div class="col-span-2 group">
-<div class="polaroid-frame transition-transform hover:rotate-1 duration-300 reveal-on-scroll" data-delay="500">
-<div class="aspect-[16/9] overflow-hidden rounded-sm">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcfPGgOs8rTuEDEG6hZ_0_cLJAt1qG8kkDsdxA03oLSKJvne8gN_jUv_p9Pnk5B2FvF5OyTYDuHsXjXs0HiCyLJF8eiB2UNQ9T04Z1CKSZOX4hzi5K89fIpC_Qp1qN1e_ptOLVNJ2Nme3cRTeDa300dkGpKxpKhwmnyS0j36xxqDIJJXEghpJ40m-54yLnPQ-K7vEGi6-EguFSIAFvSZ4UIrxCr1wqUadVu6Xn51lapVeKU5yJbqwm"/>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 2. Horizontal Scrolling Carousel (Daily Life) -->
-<section class="mb-section-gap">
-<div class="flex justify-between items-end mb-10">
-<div class="relative">
-<span class="material-symbols-outlined absolute -left-8 -top-4 text-primary-container/40 animate-spin-slow">auto_awesome</span>
-<h3 class="font-headline-md text-primary">Snapshot Ngày Thường</h3>
-<p class="text-secondary font-italic-accent text-base">Những góc nhỏ thân thuộc</p>
-</div>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-<!-- Image 1 -->
-<div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative" data-index="0" data-delay="0">
-<div class="aspect-square overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G"/>
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
-</div>
-</div>
-</div>
-<!-- Image 2 -->
-<div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative" data-index="1" data-delay="150">
-<div class="aspect-square overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKvL_jdcu59AAKcezc4Wg2zF0llDrgiZzgK7iiqyYJHz87nFcTBCporgKDTqBY7J6ZUen76Jl84TKY1vn5v_EdEJHGnsar78a8O65zYaKz1oXHCffoFmFIPU5k7bZh3ChFUFkiZOKqQWmEFb28WWSNGnq3Xc4-G1jhKgY1KmrNW_XV4hg4_5KFne_M6kDHA0ikx9O03F6SlV5hzm3-2cz6XnZKC5dLBPNe5JmZiNB4qSQF9R6so70Y"/>
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
-</div>
-</div>
-</div>
-<!-- Image 3 -->
-<div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative" data-index="2" data-delay="300">
-<div class="aspect-square overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmnc4KKgg_48iHFO0l8QZrSVl8PaKjtDl_41rr6SisXvIPRrHqVDrRekKjIMfzh8nCk3ucFde6Z3gfjtX5ngZc0J6BK__7jk1exKJHJEU_WlCcDKtd-6RNo8u3POukC44lirHf_VKZuFgaZjalSsDuhUNhXE2ogLDYNB6xyGXjntL4U5tXnamh3W0CmyWyHOS0FrST6RbT0unla4bh4pHaetKSjkIEb4pSetQRCvdUfjaN-mjGQ9Sr"/>
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
-</div>
-</div>
-</div>
-<!-- Image 4 with Overlay -->
-<div class="polaroid-frame relative group cursor-pointer reveal-on-scroll snapshot-card" data-index="3" data-delay="450">
-<div class="aspect-square overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPfDaiwEDldhRjUkrBARTHwTZujgwAbkLwn7FXlNgM_zO7Gw5pJZZKj79jDWGTyCKOU_s6pvL3MfD997IA-8V-kuAPzGl_RcpTldcurtkhIvVKhMKm8MkMgjF--myIFZJVXNQjdV693G4_PV5JyBFiUIjxWI_pT7rvaZ8yomStlWzc8SB2-fK8bafqoMAnYOOEbZ2e-0A4hZH4oARLq5jAmyQGhGPu8824svHNf12phRZZ7CVjIe7"/>
-<div class="absolute inset-0 bg-black/55 flex flex-col items-center justify-center transition-colors group-hover:bg-black/65">
-<span class="text-white font-headline-md text-3xl">+12</span>
-<span class="text-white/90 text-xs font-label-caps mt-1 flex items-center gap-1"><span class="material-symbols-outlined text-sm">photo_library</span> Xem Trọn Album</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- 3. Structured 2-Column Grid (Professional Portraits) -->
-<section class="mb-section-gap relative overflow-x-clip">
-<div class="absolute -right-20 top-1/2 -translate-y-1/2 text-primary-container/10 -z-10 rotate-45">
-<span class="material-symbols-outlined text-[200px]">auto_awesome</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="order-2 md:order-1">
-<div class="polaroid-frame max-w-sm mx-auto transform -rotate-2 shadow-2xl relative reveal-on-scroll reveal-left" data-delay="100">
-<!-- Decor Flower -->
-<div class="absolute -top-6 -right-6 text-secondary-fixed-dim/60">
-<span class="material-symbols-outlined text-5xl">filter_vintage</span>
-</div>
-<div class="aspect-[4/5] overflow-hidden rounded-sm">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA586fSMba61w_T1lG3QDz9XqbzU_T6ZZRSid8a0vyYVNq-E7s7D2t28CdjRCNP8bU8JLWfl1KjpOSJ4n4UhVvMcbaGPI01BkM55_hEfbZ0EY7poZ7y06e-aB2ylxsdO4kDmH5S_vV576WxjeMRFCLNkz5N4sAuzzO8gefghNeZiaQkGEh3_-1XpY2ZVEfCY81vUzeulHoUxClQASDsaUDN7RK47sltLsfBQAaa4zcCI66bwKahPWtz"/>
-</div>
-<div class="mt-6 flex justify-center">
-<div class="washi-tape font-label-caps text-[11px] text-primary">CUM LAUDE 2024</div>
-</div>
-</div>
-</div>
-<div class="order-1 md:order-2 space-y-8 reveal-on-scroll reveal-right" data-delay="250">
-<div class="space-y-2">
-<div class="flex items-center gap-3">
-<div class="h-[1px] w-8 bg-secondary-fixed-dim"></div>
-<span class="font-label-caps text-[11px] text-secondary tracking-widest uppercase">Chân Dung Thành Tựu</span>
-</div>
-<h4 class="font-headline-md text-primary text-4xl leading-tight">Vẻ Đẹp của<br/>Tri Thức</h4>
-</div>
-<p class="font-body-lg text-on-surface-variant leading-relaxed max-w-md">
-                    Từng bước đi trong suốt 4 năm qua không chỉ là những bài giảng trên giảng đường, mà còn là hành trình khám phá bản thân và trưởng thành trong suy nghĩ.
-                </p>
-<div class="pt-8 border-t border-outline-variant/30 relative">
-<span class="material-symbols-outlined absolute -top-4 left-0 text-primary-container/40">format_quote</span>
-<p class="font-italic-accent text-primary text-xl pl-6">"Học vấn là chìa khóa mở cánh cửa tương lai."</p>
-</div>
-</div>
-</div>
-</section>
-<!-- 4. Family & Friends Scrapbook Album (1 Ảnh To & Nhiều Ảnh Nhỏ Xung Quanh) -->
-<section class="mb-12 relative overflow-x-clip">
-<!-- Heading close to photos -->
-<div class="text-center mb-6 relative">
-<h3 class="font-headline-md text-primary text-3xl md:text-4xl">Người Bạn Đồng Hành</h3>
-<p class="text-secondary font-italic-accent mt-1">Phía sau mỗi thành công là sự yêu thương &amp; sẻ chia</p>
-<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-primary-container/15 pointer-events-none">
-<span class="material-symbols-outlined text-[70px]">favorite</span>
-</div>
-</div>
-<!-- Layout: 1 Ảnh To Chính Giữa & Nhiều Ảnh Nhỏ Xung Quanh -->
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-center max-w-6xl mx-auto px-2">
-<!-- Left Column (2 Small Photos) -->
-<div class="flex flex-col gap-6">
-<!-- Small Photo 1 (Slide from left) -->
-<div class="polaroid-frame transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-left" data-delay="100">
-<div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVEy9npL0lhZfVMzv13BkfnTGDnLb24D-uxDDhwvB4PvAepGXN3lf5hYt9-znoL5bXhbXkzIgRntM3puVdy0UoOQ4a207Jo2nmgMFAzVLXYUjfDWBdVAQdIoYi0SbejtpHMDxoVmjsCtE1bbBV4wGotSi-O4ZhU2NjPPtIIiYyIjRwOzi63zH5n1oVebD2IjoEoeeENHLSnz_kP4jk5hz4dZU-1KkcdhyaQxSM2oo0oqWXjtwGhjKb"/>
-</div>
-<div class="mt-2 flex justify-between items-center text-xs">
-<span class="font-italic-accent text-primary">Khoảnh Khắc Đáng Nhớ</span>
-<span class="material-symbols-outlined text-xs text-secondary-fixed-dim">sparkles</span>
-</div>
-</div>
-<!-- Small Photo 2 (Slide from left delay 300ms) -->
-<div class="polaroid-frame transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-left" data-delay="300">
-<div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrlF-AohaaSfFS6HdyL10VFv9E2rQLNv7VIZ4E35RalFxjStmMPm85w84I1Td7lUkC590OUtZkg744ec7mra4wZIddNiLkj25cANG-fNjkJUaeb3erAqmM0k9XtdGnuQzUSAqDkOKG1XXYwr3kmU1ZzAZxWL1H18013eRgz8Zww8cs2uMi-NQp8swH1zDHCttwhD63tfbQ-ttREQ1oafQZkQlcO8Ib7GNvSiZsVS8FQt2rXlHRE4lO"/>
-</div>
-<div class="mt-2 flex justify-between items-center text-xs">
-<span class="font-italic-accent text-primary">Thanh Xuân Bên Nhau 🌸</span>
-<span class="washi-tape font-label-caps text-[8px] text-primary">FRIENDS</span>
-</div>
-</div>
-</div>
-<!-- Center Column: 1 BIG HERO PHOTO + 2 Small Photos Below -->
-<div class="sm:col-span-2 flex flex-col gap-6">
-<!-- 1 BIG CENTER HERO PHOTO (Slide up from bottom) -->
-<div class="polaroid-frame transform hover:scale-[1.02] transition-all duration-500 shadow-2xl border-2 border-primary/20 group reveal-on-scroll" data-delay="0">
-<div class="aspect-[16/11] overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmWxzvfZuM7c_QvZuyrHCBxg3uA1TLMjosWIHTdHO3C8jWOVjBIf0Yw9dECL-RztSOs4OV_8F6VGmcvqrK8JH7ZFAgLD-WVu0nM_HQa_w9JoT-rkwslZWBXH7U7rJjhto4CbpnS-n_KaB2HRqRoAcijIepemF6puVzvQ_z9NyBBhJTpzR0cHI9oRS514W_BeMBp2ikAh_DTu1xsblLBR2NLdaMsIIrM8DE5jtV-G42wHRGZKd3mGI_"/>
-<div class="absolute bottom-4 right-4 speech-bubble-tag">
-<span class="font-headline-sm text-primary text-base">Gia Đình Là Điểm Tựa ❤️</span>
-</div>
-</div>
-<div class="mt-3 flex justify-between items-center">
-<span class="font-italic-accent text-base text-primary font-bold">With Family &amp; Loved Ones</span>
-<div class="washi-tape font-label-caps text-[10px] text-primary">SPOTLIGHT 2024</div>
-</div>
-</div>
-<!-- 2 Small Photos Directly Below Big Photo -->
-<div class="grid grid-cols-2 gap-4">
-<div class="polaroid-frame transform -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll" data-delay="200">
-<div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu92zqMFecDjUKfVy4KCvSBrI-i9Vxml2O9VFWoSRfuE2zNdB5oRASIlsZS9vTVwJoTDONN41oXt9U7oV6VZAysajCNqYH21iLiJCTIvoQEvKHucxmEehZuIYYn9-cCZgt9f9gxnfDmWseeaXPGsXMKuQR2NT7f57187SHRI_elcXwKX67oMEy5uLwT9fRs9bNOYy7D-K2VzUDeW0fUkznHAAooOUNWKBSTr8nfn1dnq3YeBTSHpO7"/>
-</div>
-<div class="mt-2 text-center text-xs font-italic-accent text-primary">Nụ Cười Rạng Rỡ</div>
-</div>
-<div class="polaroid-frame transform rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll" data-delay="350">
-<div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G"/>
-</div>
-<div class="mt-2 text-center text-xs font-italic-accent text-primary">Kỷ Niệm Sân Trường</div>
-</div>
-</div>
-</div>
-<!-- Right Column (2 Small Photos) -->
-<div class="flex flex-col gap-6">
-<!-- Small Photo 5 (Slide from right delay 200ms) -->
-<div class="polaroid-frame transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-right" data-delay="200">
-<div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPfDaiwEDldhRjUkrBARTHwTZujgwAbkLwn7FXlNgM_zO7Gw5pJZZKj79jDWGTyCKOU_s6pvL3MfD997IA-8V-kuAPzGl_RcpTldcurtkhIvVKhMKm8MkMgjF--myIFZJVXNQjdV693G4_PV5JyBFiUIjxWI_pT7rvaZ8yomStlWzc8SB2-fK8bafqoMAnYOOEbZ2e-0A4hZH4oARLq5jAmyQGhGPu8824svHNf12phRZZ7CVjIe7"/>
-</div>
-<div class="mt-2 flex justify-between items-center text-xs">
-<span class="font-italic-accent text-primary">Ngày Vui Trọn Vẹn ✨</span>
-<span class="material-symbols-outlined text-xs text-secondary-fixed-dim">favorite</span>
-</div>
-</div>
-<!-- Small Photo 6 (Slide from right delay 450ms) -->
-<div class="polaroid-frame transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-right" data-delay="450">
-<div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc1DbsUeGQBQtvi0jxrbK2uL-_kfFJ8-g7WCaxMy-CWuLbY20gb9aX2IcBKR2gfp3XDn1nZjO76HtVY5QZ-VHbVepj8a_Xq8ibEib_byVSbWyBq1YXC1VxljhsTPh2zNX_u88QSVTR7iimDf4DBkD2ZmU8MnocUepb_seWn4080TSxyIq3d47WaI88ecB4LO3Y-hsTLmrAlNQTNA-TDLg21baqNJX1TuXX7PKDACR4bCrZKoMgrrPf"/>
-</div>
-<div class="mt-2 flex justify-between items-center text-xs">
-<span class="font-italic-accent text-primary">Khoảnh Khắc Tốt Nghiệp</span>
-<span class="washi-tape font-label-caps text-[8px] text-primary">2024</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Event Details Section (Time & Date / Real Interactive Map) at Bottom -->
-<section class="mt-10 mb-2 max-w-4xl mx-auto px-4 reveal-on-scroll">
-<div class="bg-white/85 backdrop-blur-md rounded-3xl border border-white shadow-2xl overflow-hidden">
-<!-- Top Details Banner -->
-<div class="grid grid-cols-1 md:grid-cols-3 items-center gap-6 p-8 border-b border-outline-variant/20">
-<!-- Time & Date -->
-<div class="text-center md:text-left flex flex-col items-center md:items-start">
-<span class="inline-flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant mb-1 tracking-widest">
-<span class="material-symbols-outlined text-sm text-primary">calendar_month</span> TIME &amp; DATE
-</span>
-<p class="font-headline-sm text-primary text-2xl font-bold">18.05.2024</p>
-<p class="font-body-md text-secondary mt-1">09:30 — 12:00</p>
-</div>
-<!-- Center Decorative Badge -->
-<div class="flex flex-col items-center justify-center text-primary-container/70 my-2 md:my-0">
-<span class="material-symbols-outlined text-5xl animate-pulse">local_florist</span>
-<span class="font-italic-accent text-xs text-primary mt-1">Lễ Tốt Nghiệp</span>
-</div>
-<!-- Location Info -->
-<div class="text-center md:text-right flex flex-col items-center md:items-end">
-<span class="inline-flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant mb-1 tracking-widest">
-<span class="material-symbols-outlined text-sm text-primary">location_on</span> LOCATION
-</span>
-<p class="font-body-md font-semibold text-primary text-lg">Đại học Công nghệ Đông Á</p>
-<p class="font-body-md text-on-surface-variant text-sm mt-0.5">Trịnh Văn Bô, Xuân Phương, Hà Nội</p>
-<a href="https://maps.google.com/?q=Đại+học+Công+nghệ+Đông+Á+Hà+Nội" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary text-white rounded-full text-xs font-medium hover:bg-primary/90 transition-all shadow-sm">
-<span class="material-symbols-outlined text-sm">directions</span> Chỉ đường Google Maps
-</a>
-</div>
-</div>
-<!-- Interactive Real Google Map Embed -->
-<div class="relative w-full h-[360px] md:h-[420px] bg-surface-variant/30">
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863855881404!2d105.74459841533214!3d21.03813279283542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgxJDDtG5nIMOB!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
-width="100%" 
-height="100%" 
-style="border:0;" 
-allowfullscreen="" 
-loading="lazy" 
-referrerpolicy="no-referrer-when-downgrade" 
-class="w-full h-full object-cover">
-</iframe>
-</div>
-</div>
-</section>
-<!-- Thank You Letter Section (Lời Cảm Ơn) -->
-<section class="mt-8 mb-12 max-w-3xl mx-auto px-4 reveal-on-scroll">
-<div class="bg-white/90 backdrop-blur-md rounded-3xl border border-white p-8 md:p-12 shadow-2xl relative overflow-hidden text-center">
-<!-- Subtle Background Watermark -->
-<div class="absolute -right-12 -top-12 text-rose-300/25 pointer-events-none">
-<span class="material-symbols-outlined text-[180px]">local_florist</span>
-</div>
-<div class="absolute -left-12 -bottom-12 text-amber-300/25 pointer-events-none">
-<span class="material-symbols-outlined text-[180px]">filter_vintage</span>
-</div>
-<div class="relative z-10 flex flex-col items-center">
-<!-- Floral Badge -->
-<div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-rose-50 border border-rose-200 text-rose-500 mb-4 shadow-md">
-<span class="material-symbols-outlined text-3xl animate-pulse">local_florist</span>
-</div>
-<span class="font-label-caps text-[11px] text-rose-600 tracking-[0.3em] uppercase mb-2 font-semibold">Lời Cảm Ơn Chân Thành</span>
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-rose-400 text-xl">filter_vintage</span>
-<h3 class="font-headline-md text-primary text-3xl md:text-4xl">Trân Trọng &amp; Tri Ân</h3>
-<span class="material-symbols-outlined text-rose-400 text-xl">filter_vintage</span>
-</div>
-<!-- Divider -->
-<div class="w-20 h-[2px] bg-gradient-to-r from-transparent via-rose-400 to-transparent mb-8"></div>
-<!-- Message Body -->
-<div class="font-body-lg text-on-surface-variant leading-relaxed space-y-4 max-w-xl mx-auto text-base md:text-lg">
-<p>
-Hành trình 4 năm đại học khép lại, để lại những kỷ niệm vô giá và hành trang tri thức vững chắc cho tương lai.
-</p>
-<p>
-Con xin gửi lời tri ân sâu sắc nhất tới <strong class="text-primary font-semibold">Bố Mẹ và Gia đình</strong> — điểm tựa yêu thương đã luôn hy sinh và nâng bước con. Xin chân thành cảm ơn các <strong class="text-primary font-semibold">Thầy Cô giáo</strong> và những <strong class="text-primary font-semibold">Người bạn tuyệt vời</strong> đã luôn đồng hành, chỉ bảo và sẻ chia từng khoảnh khắc thanh xuân.
-</p>
-<p class="font-italic-accent text-primary italic text-lg md:text-xl pt-2">
-"Sự hiện diện của quý vị là niềm vinh hạnh và hạnh phúc lớn nhất trong ngày vui trọn vẹn này!"
-</p>
-</div>
-<!-- Signature -->
-<div class="mt-10 flex flex-col items-center">
-<p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">WITH ALL MY LOVE,</p>
-<p class="font-headline-sm text-primary text-2xl font-bold">Nguyễn Thị Hương</p>
-<div class="washi-tape font-label-caps text-[9px] text-primary mt-3">CLASS OF 2024</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full pt-10 pb-16 bg-white/60 border-t border-outline-variant/20 relative overflow-hidden">
-<div class="absolute inset-0 opacity-5 pointer-events-none">
-<div class="absolute top-10 left-10"><span class="material-symbols-outlined text-8xl">filter_vintage</span></div>
-<div class="absolute bottom-10 right-10"><span class="material-symbols-outlined text-8xl">auto_awesome</span></div>
-</div>
-<div class="flex flex-col items-center gap-6 px-8 text-center relative z-10">
-<h2 class="font-display-lg text-primary text-4xl">Hành Trình Tiếp Nối</h2>
-<div class="w-16 h-[1px] bg-primary/20"></div>
-<p class="font-italic-accent text-tertiary italic text-lg max-w-md">"Kết thúc một chương sách để bắt đầu một hành trình rực rỡ hơn."</p>
-<p class="font-label-caps text-[10px] text-on-surface-variant tracking-[0.3em] mt-8">© 2024 CLASS OF EXCELLENCE</p>
-<div class="flex gap-12 mt-4">
-<a class="font-label-caps text-[10px] text-primary hover:text-secondary transition-colors tracking-widest" href="#">CONTACT</a>
-<a class="font-label-caps text-[10px] text-primary hover:text-secondary transition-colors tracking-widest" href="#">RSVP</a>
-</div>
-</div>
-</footer>
-</div>
-<!-- BottomNavBar -->
-<script>
-    // Carousel navigation
-    const scrollContainer = document.querySelector('.overflow-x-auto');
-    const buttons = document.querySelectorAll('button');
-    const prevBtn = buttons[1]; // Adjust based on position
-    const nextBtn = buttons[2]; 
 
-    if(nextBtn && prevBtn && scrollContainer) {
-        nextBtn.addEventListener('click', () => {
-            scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
-        });
-        prevBtn.addEventListener('click', () => {
-            scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
-        });
-    }
+<body
+    class="paper-texture text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden max-h-screen overflow-y-hidden relative w-full max-w-full min-h-screen">
+    <!-- Subtle Particle Background -->
+    <div class="fixed inset-0 pointer-events-none z-0" id="particle-container"></div>
 
-    // Parallax effect for cards
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const polaroids = document.querySelectorAll('.polaroid-frame');
-        polaroids.forEach((card, index) => {
-            const speed = (index % 3 + 1) * 0.02;
-            const rotation = card.classList.contains('rotate-1') ? 1 : 
-                             card.classList.contains('-rotate-1') ? -1 :
-                             card.classList.contains('rotate-2') ? 2 :
-                             card.classList.contains('-rotate-2') ? -2 : 0;
-            // card.style.transform = `translateY(${scrolled * speed}px) rotate(${rotation}deg)`;
-        });
-    });
-</script>
-<div class="fixed bottom-8 right-8 z-50 group" id="music-player-container">
-<!-- Audio Element -->
-<audio id="bg-music" loop="" preload="auto">
-<source src="music.mp3" type="audio/mpeg"/>
-</audio>
-<!-- Interactive Vinyl Button -->
-<button aria-label="Bật/Tắt Nhạc" class="relative w-16 h-16 focus:outline-none transition-transform active:scale-95 group/btn" id="music-toggle-btn">
-<!-- Pulse Ring when playing -->
-<div class="absolute inset-0 rounded-full bg-primary/30 animate-ping opacity-75 hidden" id="music-pulse"></div>
-<!-- Vinyl Disc -->
-<div class="relative w-full h-full bg-zinc-900 rounded-full shadow-2xl border-4 border-white/80 flex items-center justify-center animate-spin-slow spin-paused" id="vinyl-disc">
-<!-- Vinyl Grooves -->
-<div class="absolute inset-1 rounded-full border border-white/10"></div>
-<div class="absolute inset-3 rounded-full border border-white/10"></div>
-<div class="absolute inset-5 rounded-full border border-white/10"></div>
-<!-- Center Label -->
-<div class="w-6 h-6 bg-primary rounded-full border-2 border-zinc-800 flex items-center justify-center relative">
-<div class="w-1.5 h-1.5 bg-white rounded-full"></div>
-</div>
-</div>
-<!-- Playing Badge / Muted Badge -->
-<div class="absolute -top-1 -right-1 w-6 h-6 bg-primary text-white rounded-full shadow-md flex items-center justify-center hidden" id="music-playing-badge">
-<span class="material-symbols-outlined text-[13px]">music_note</span>
-</div>
-<div class="absolute -top-1 -right-1 w-6 h-6 bg-white/95 text-primary rounded-full shadow-md border border-outline-variant flex items-center justify-center" id="music-muted-badge">
-<span class="material-symbols-outlined text-[13px]">volume_off</span>
-</div>
-</button>
-<!-- Tooltip/Label -->
-<div class="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-<div class="bg-white px-3 py-1.5 rounded-full shadow-lg border border-outline-variant text-[10px] font-label-caps text-primary whitespace-nowrap" id="music-tooltip">ĐANG TẮT NHẠC • BẤM ĐỂ BẬT NHẠC</div>
-</div>
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const audio = document.getElementById('bg-music');
-        const toggleBtn = document.getElementById('music-toggle-btn');
-        const vinylDisc = document.getElementById('vinyl-disc');
-        const pulseRing = document.getElementById('music-pulse');
-        const mutedBadge = document.getElementById('music-muted-badge');
-        const playingBadge = document.getElementById('music-playing-badge');
-        const tooltip = document.getElementById('music-tooltip');
+    <!-- Envelope Screen Overlay -->
+    <div id="envelope-screen"
+        class="fixed inset-0 z-50 flex flex-col items-center justify-center p-6 bg-transparent transition-all duration-1000 ease-in-out">
+        <header class="absolute top-0 w-full flex justify-center py-8">
+            <h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-widest opacity-40">
+                COMMENCEMENT 2024</h1>
+        </header>
 
-        let isPlaying = false;
-
-        const updateUI = () => {
-            if (isPlaying) {
-                vinylDisc.classList.remove('spin-paused');
-                pulseRing.classList.remove('hidden');
-                mutedBadge.classList.add('hidden');
-                playingBadge.classList.remove('hidden');
-                tooltip.textContent = 'DỪNG NHẠC • NOW PLAYING';
-            } else {
-                vinylDisc.classList.add('spin-paused');
-                pulseRing.classList.add('hidden');
-                mutedBadge.classList.remove('hidden');
-                playingBadge.classList.add('hidden');
-                tooltip.textContent = 'BẬT NHẠC • CLICK TO PLAY';
-            }
-        };
-
-        const playMusic = () => {
-            audio.play().then(() => {
-                isPlaying = true;
-                updateUI();
-            }).catch(err => {
-                console.log('Autoplay chờ tương tác người dùng:', err);
-                isPlaying = false;
-                updateUI();
-            });
-        };
-
-        const pauseMusic = () => {
-            audio.pause();
-            isPlaying = false;
-            updateUI();
-        };
-
-        toggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            if (isPlaying) {
-                pauseMusic();
-            } else {
-                playMusic();
-            }
-        });
-
-        // Tự động phát nhạc ngay khi tải trang
-        playMusic();
-
-        // Cơ chế thông minh: Nếu trình duyệt chặn Autoplay (do chính sách âm thanh), tự động phát ngay tại cú click/cuộn/chạm đầu tiên trên trang
-        const enableAutoplayFallback = () => {
-            if (!isPlaying) {
-                playMusic();
-            }
-            window.removeEventListener('click', enableAutoplayFallback);
-            window.removeEventListener('touchstart', enableAutoplayFallback);
-            window.removeEventListener('scroll', enableAutoplayFallback);
-            window.removeEventListener('keydown', enableAutoplayFallback);
-        };
-
-        window.addEventListener('click', enableAutoplayFallback);
-        window.addEventListener('touchstart', enableAutoplayFallback);
-        window.addEventListener('scroll', enableAutoplayFallback);
-        window.addEventListener('keydown', enableAutoplayFallback);
-
-        // IntersectionObserver cho hiệu ứng Scroll Slide-in & Fade-in mượt mà
-        const revealElements = document.querySelectorAll('.reveal-on-scroll');
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -40px 0px',
-            threshold: 0.12
-        };
-
-        const revealObserver = new IntersectionObserver((entries, obs) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const delay = el.getAttribute('data-delay') || 0;
-                    setTimeout(() => {
-                        el.classList.add('is-revealed');
-                    }, parseInt(delay));
-                    obs.unobserve(el);
-                }
-            });
-        }, observerOptions);
-
-        revealElements.forEach(el => revealObserver.observe(el));
-
-        // Lightbox Modal cho Snapshot Ngày Thường
-        const snapshotGallery = [
-            {
-                src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G",
-                caption: "Góc nhỏ sân trường thân quen — 2024"
-            },
-            {
-                src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDKvL_jdcu59AAKcezc4Wg2zF0llDrgiZzgK7iiqyYJHz87nFcTBCporgKDTqBY7J6ZUen76Jl84TKY1vn5v_EdEJHGnsar78a8O65zYaKz1oXHCffoFmFIPU5k7bZh3ChFUFkiZOKqQWmEFb28WWSNGnq3Xc4-G1jhKgY1KmrNW_XV4hg4_5KFne_M6kDHA0ikx9O03F6SlV5hzm3-2cz6XnZKC5dLBPNe5JmZiNB4qSQF9R6so70Y",
-                caption: "Khoảnh khắc ôn bài dưới tán cây"
-            },
-            {
-                src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDmnc4KKgg_48iHFO0l8QZrSVl8PaKjtDl_41rr6SisXvIPRrHqVDrRekKjIMfzh8nCk3ucFde6Z3gfjtX5ngZc0J6BK__7jk1exKJHJEU_WlCcDKtd-6RNo8u3POukC44lirHf_VKZuFgaZjalSsDuhUNhXE2ogLDYNB6xyGXjntL4U5tXnamh3W0CmyWyHOS0FrST6RbT0unla4bh4pHaetKSjkIEb4pSetQRCvdUfjaN-mjGQ9Sr",
-                caption: "Nụ cười rạng rỡ trước kỳ thi cuối"
-            },
-            {
-                src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBCPfDaiwEDldhRjUkrBARTHwTZujgwAbkLwn7FXlNgM_zO7Gw5pJZZKj79jDWGTyCKOU_s6pvL3MfD997IA-8V-kuAPzGl_RcpTldcurtkhIvVKhMKm8MkMgjF--myIFZJVXNQjdV693G4_PV5JyBFiUIjxWI_pT7rvaZ8yomStlWzc8SB2-fK8bafqoMAnYOOEbZ2e-0A4hZH4oARLq5jAmyQGhGPu8824svHNf12phRZZ7CVjIe7",
-                caption: "Ngày lễ tốt nghiệp ý nghĩa trọn vẹn"
-            },
-            {
-                src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCmWxzvfZuM7c_QvZuyrHCBxg3uA1TLMjosWIHTdHO3C8jWOVjBIf0Yw9dECL-RztSOs4OV_8F6VGmcvqrK8JH7ZFAgLD-WVu0nM_HQa_w9JoT-rkwslZWBXH7U7rJjhto4CbpnS-n_KaB2HRqRoAcijIepemF6puVzvQ_z9NyBBhJTpzR0cHI9oRS514W_BeMBp2ikAh_DTu1xsblLBR2NLdaMsIIrM8DE5jtV-G42wHRGZKd3mGI_",
-                caption: "Gia đình và những người thương yêu nhất"
-            },
-            {
-                src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCrlF-AohaaSfFS6HdyL10VFv9E2rQLNv7VIZ4E35RalFxjStmMPm85w84I1Td7lUkC590OUtZkg744ec7mra4wZIddNiLkj25cANG-fNjkJUaeb3erAqmM0k9XtdGnuQzUSAqDkOKG1XXYwr3kmU1ZzAZxWL1H18013eRgz8Zww8cs2uMi-NQp8swH1zDHCttwhD63tfbQ-ttREQ1oafQZkQlcO8Ib7GNvSiZsVS8FQt2rXlHRE4lO",
-                caption: "Hội bạn thân 4 năm thanh xuân bên nhau"
-            }
-        ];
-
-        let currentLightboxIndex = 0;
-        const lightbox = document.getElementById('snapshot-lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxCaption = document.getElementById('lightbox-caption');
-        const lightboxCounter = document.getElementById('lightbox-counter');
-        const lightboxContent = document.getElementById('lightbox-content');
-
-        const openLightbox = (index) => {
-            currentLightboxIndex = index;
-            updateLightboxView();
-            lightbox.classList.remove('opacity-0', 'pointer-events-none');
-            lightbox.classList.add('opacity-100');
-            lightboxContent.classList.remove('scale-95');
-            lightboxContent.classList.add('scale-100');
-        };
-
-        const closeLightbox = () => {
-            lightbox.classList.remove('opacity-100');
-            lightbox.classList.add('opacity-0', 'pointer-events-none');
-            lightboxContent.classList.remove('scale-100');
-            lightboxContent.classList.add('scale-95');
-        };
-
-        const updateLightboxView = () => {
-            const item = snapshotGallery[currentLightboxIndex];
-            lightboxImg.style.opacity = '0';
-            setTimeout(() => {
-                lightboxImg.src = item.src;
-                lightboxCaption.textContent = item.caption;
-                lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${snapshotGallery.length}`;
-                lightboxImg.style.opacity = '1';
-            }, 120);
-        };
-
-        const nextLightbox = () => {
-            currentLightboxIndex = (currentLightboxIndex + 1) % snapshotGallery.length;
-            updateLightboxView();
-        };
-
-        const prevLightbox = () => {
-            currentLightboxIndex = (currentLightboxIndex - 1 + snapshotGallery.length) % snapshotGallery.length;
-            updateLightboxView();
-        };
-
-        document.querySelectorAll('.snapshot-card').forEach((card, idx) => {
-            card.addEventListener('click', () => {
-                const indexAttr = card.getAttribute('data-index');
-                const idxToOpen = indexAttr !== null ? parseInt(indexAttr) : idx;
-                openLightbox(idxToOpen);
-            });
-        });
-
-        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-        document.getElementById('lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); nextLightbox(); });
-        document.getElementById('lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); prevLightbox(); });
-
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
-
-        window.addEventListener('keydown', (e) => {
-            if (lightbox.classList.contains('opacity-100')) {
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowRight') nextLightbox();
-                if (e.key === 'ArrowLeft') prevLightbox();
-            }
-        });
-    });
-</script>
-<!-- Snapshot Lightbox Modal -->
-<div id="snapshot-lightbox" class="fixed inset-0 z-[100] bg-black/85 backdrop-blur-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4">
-    <!-- Close Button -->
-    <button id="lightbox-close" class="absolute top-6 right-6 text-white/80 hover:text-white bg-white/15 hover:bg-white/25 p-3 rounded-full transition-all duration-200 z-[110] flex items-center justify-center">
-        <span class="material-symbols-outlined text-2xl">close</span>
-    </button>
-
-    <!-- Prev Button -->
-    <button id="lightbox-prev" class="absolute left-4 md:left-8 text-white/80 hover:text-white bg-white/15 hover:bg-white/25 p-3 rounded-full transition-all duration-200 z-[110] flex items-center justify-center">
-        <span class="material-symbols-outlined text-3xl">chevron_left</span>
-    </button>
-
-    <!-- Next Button -->
-    <button id="lightbox-next" class="absolute right-4 md:right-8 text-white/80 hover:text-white bg-white/15 hover:bg-white/25 p-3 rounded-full transition-all duration-200 z-[110] flex items-center justify-center">
-        <span class="material-symbols-outlined text-3xl">chevron_right</span>
-    </button>
-
-    <!-- Modal Content -->
-    <div id="lightbox-content" class="relative max-w-4xl w-full flex flex-col items-center transform scale-95 transition-transform duration-300">
-        <div class="polaroid-frame bg-white p-4 md:p-6 rounded-lg shadow-2xl max-h-[85vh] flex flex-col items-center">
-            <div class="overflow-hidden rounded max-h-[65vh] flex items-center justify-center">
-                <img id="lightbox-img" src="" alt="Snapshot Detail" class="max-h-[65vh] w-auto object-contain rounded transition-all duration-300"/>
+        <div class="envelope-container w-full max-w-[500px] aspect-[4/3] relative cursor-pointer group"
+            onclick="openEnvelope()">
+            <!-- Shadow Bloom -->
+            <div
+                class="absolute inset-0 bg-secondary/10 blur-[40px] rounded-full scale-90 transition-transform duration-700 group-hover:scale-100">
             </div>
-            <div class="mt-4 w-full flex justify-between items-center px-2 gap-4">
-                <p id="lightbox-caption" class="font-italic-accent text-primary text-base md:text-lg font-semibold"></p>
-                <span id="lightbox-counter" class="font-label-caps text-xs text-on-surface-variant bg-surface px-3 py-1 rounded-full border border-outline-variant/30 shrink-0"></span>
+
+            <!-- Envelope Back Body -->
+            <div
+                class="absolute inset-0 bg-white gold-edge rounded-lg z-10 flex items-center justify-center">
+                <!-- Inner Content (The Polaroid Preview) -->
+                <div class="w-[85%] h-[85%] bg-white p-4 shadow-xl translate-y-4 opacity-0 transition-all duration-700 ease-out"
+                    id="invitation-card">
+                    <div class="w-full h-[75%] bg-surface-variant overflow-hidden">
+                        <img class="w-full h-full object-cover" alt="Graduation Polaroid"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYPmze8oPWj0oqiPldi3vyMJsICOo1OtDISgmOYDxQeKMyKLsEi0wwo_0g3HcHBrV8yCbzQtTxi6oFqoHefZjlEnojHj884oMYR7XDMXtwP3RVu62g2RFecgzEgYChfpX598PcrWEeb7g7hAZu3XNhKtJxbNo3iqjd0snIfe-7c_-xonAhBBaKLI9Z4CF_X6TVsoCS7fqmQhsgmwPehwoL7Y0dm9AsGiHI_wKOsSode95d7aPlWCRs" />
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="font-italic-accent text-italic-accent text-primary">Save the Date</p>
+                        <p class="font-label-caps text-[10px] text-outline mt-1 uppercase tracking-[0.2em]">June 15,
+                            2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Envelope Flap (Top) -->
+            <div class="envelope-flap absolute top-0 left-0 w-full bg-white z-30 flex items-end justify-center"
+                id="flap" style="clip-path: polygon(-1% -1%, 101% -1%, 50% 101.5%); height: 52%;">
+                <!-- Responsive Pink Border -->
+                <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100"
+                    preserveAspectRatio="none">
+                    <polyline points="0.5,0 50,99 99.5,0" fill="none" stroke="#e28b8b" stroke-width="1.5" />
+                </svg>
+            </div>
+
+            <!-- Envelope Front Sides -->
+            <div class="absolute inset-0 z-20 pointer-events-none">
+                <!-- Left Flap -->
+                <div class="absolute top-0 left-0 w-1/2 h-full bg-white"
+                    style="clip-path: polygon(-1% -1%, -1% 101%, 101.5% 50.5%);">
+                    <!-- Responsive Pink Border -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100"
+                        preserveAspectRatio="none">
+                        <polyline points="0,0.5 99,50 0,99.5" fill="none" stroke="#e28b8b" stroke-width="1.5" />
+                    </svg>
+                </div>
+                <!-- Right Flap -->
+                <div class="absolute top-0 right-0 w-1/2 h-full bg-white"
+                    style="clip-path: polygon(101% -1%, 101% 101%, -1.5% 50.5%);">
+                    <!-- Responsive Pink Border -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100"
+                        preserveAspectRatio="none">
+                        <polyline points="100,0.5 1,50 100,99.5" fill="none" stroke="#e28b8b" stroke-width="1.5" />
+                    </svg>
+                </div>
+                <!-- Bottom Flap -->
+                <div class="absolute bottom-0 left-0 w-full h-3/5 bg-white flex flex-col items-center justify-center"
+                    style="clip-path: polygon(-1% 101%, 101% 101%, 50% -1.5%);">
+                    <!-- Responsive Pink Border -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100"
+                        preserveAspectRatio="none">
+                        <polyline points="0.5,100 50,1 99.5,100" fill="none" stroke="#e28b8b" stroke-width="1.5" />
+                    </svg>
+                    <div class="pt-12 text-center z-10">
+                        <h2 class="calligraphy text-primary text-xl md:text-2xl px-6 leading-relaxed">Gửi đến những
+                            </br> người thương yêu</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wax Seal -->
+            <div class="wax-seal absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full z-40 flex items-center justify-center transition-all duration-500 group-hover:scale-110 active:scale-95 shadow-lg"
+                id="seal">
+                <span class="material-symbols-outlined text-white text-3xl"
+                    style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+            </div>
+        </div>
+
+        <!-- Instruction Text -->
+        <div class="mt-12 text-center animate-pulse" id="envelope-instruction">
+            <span class="font-label-caps text-label-caps text-on-surface-variant tracking-[0.3em]">Chạm để mở thư</span>
+            <div class="mt-4 flex justify-center gap-2">
+                <span class="w-1 h-1 rounded-full bg-primary/40"></span>
+                <span class="w-1 h-1 rounded-full bg-primary/60"></span>
+                <span class="w-1 h-1 rounded-full bg-primary/40"></span>
             </div>
         </div>
     </div>
-</div>
-</body></html>
+
+    <div id="main-wrapper"
+        class="w-full max-w-full overflow-x-hidden relative flex flex-col min-h-screen opacity-0 pointer-events-none transition-all duration-[1200ms] ease-out transform translate-y-8">
+        <main class="max-w-[1140px] w-full mx-auto px-4 sm:px-6 lg:px-8 pb-6 relative overflow-x-clip">
+            <!-- Hero Title Section -->
+            <section class="mt-16 mb-section-gap relative">
+                <div class="max-w-2xl mx-auto relative">
+                    <div class="absolute -top-12 left-0 font-label-caps text-primary/40 tracking-[0.3em] text-[10px]">
+                        HAPPY</div>
+                    <div class="absolute -top-12 right-0 font-label-caps text-primary/40 tracking-[0.3em] text-[10px]">
+                        GRADUATION</div>
+                    <!-- Main Polaroid -->
+                    <div class="bg-white p-6 pb-16 rounded-sm shadow-2xl relative z-10 border border-outline-variant/10 reveal-on-scroll"
+                        data-delay="0">
+                        <div class="aspect-[4/5] rounded-sm overflow-hidden relative group">
+                            <img alt="Nguyễn Thị Hương Graduation"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwKSmKXd-1eHaHosrVBCFAzIgU5wM0I5rk6E_tP3z5cpvD06MNAoVPrTcrQmEo0uGIa9e_lB8DxBdLMy7LkDgM_K27IbxTcczRnwhb3zDmgbknfL-rxpghPIUfhYXVx48PWhrJbO_vHRXEyypNyWi1iS7PwVgXlda1Jt2L6kzUcnALmz4BchLQsbkgNBvXMiQ4Pq_bmrTyu_OFV7Fe2MlISxn9IZVuDV6MAsvwYDpjV8QUBPfLOd5qgRxmEiObPoXOww" />
+                            <!-- Speech Bubble Tag -->
+                            <div class="absolute bottom-6 right-6 speech-bubble-top-left">
+                                <span class="font-headline-sm text-primary text-lg">Nguyễn Thị Hương</span>
+                            </div>
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div class="absolute -left-10 -bottom-6 text-primary-container/60 scale-150 animate-pulse">
+                            <span class="material-symbols-outlined text-6xl">filter_vintage</span>
+                        </div>
+                        <div class="absolute -right-8 top-12 text-secondary-fixed-dim/40 scale-125">
+                            <span class="material-symbols-outlined text-5xl">auto_awesome</span>
+                        </div>
+                        <!-- Hero Title Text -->
+                        <div class="mt-12 text-center space-y-2">
+                            <p class="font-italic-accent text-secondary italic">Thư Mời Tham Dự</p>
+                            <h2 class="font-display-lg text-primary uppercase leading-none">BUỔI LỄ TỐT NGHIỆP</h2>
+                            <div class="flex justify-center gap-1 text-secondary-fixed-dim/60">
+                                <span class="material-symbols-outlined text-sm">sparkles</span>
+                                <span class="material-symbols-outlined text-sm">sparkles</span>
+                                <span class="material-symbols-outlined text-sm">sparkles</span>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- 1. Hero Masonry Grid (Key Highlights) -->
+            <section class="mb-section-gap relative overflow-x-clip">
+                <div class="absolute -left-20 top-0 text-primary-container/20 -z-10">
+                    <span class="material-symbols-outlined text-[120px]">filter_vintage</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <div class="col-span-2 row-span-2 group">
+                        <div class="polaroid-frame h-full transition-transform hover:-rotate-1 duration-300 reveal-on-scroll"
+                            data-delay="0">
+                            <div class="aspect-[4/5] md:aspect-auto md:h-full overflow-hidden rounded-sm">
+                                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc1DbsUeGQBQtvi0jxrbK2uL-_kfFJ8-g7WCaxMy-CWuLbY20gb9aX2IcBKR2gfp3XDn1nZjO76HtVY5QZ-VHbVepj8a_Xq8ibEib_byVSbWyBq1YXC1VxljhsTPh2zNX_u88QSVTR7iimDf4DBkD2ZmU8MnocUepb_seWn4080TSxyIq3d47WaI88ecB4LO3Y-hsTLmrAlNQTNA-TDLg21baqNJX1TuXX7PKDACR4bCrZKoMgrrPf" />
+                            </div>
+                            <div class="mt-4 flex items-center gap-2">
+                                <div class="washi-tape text-[10px] font-label-caps text-primary">KHOẢNH KHẮC</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1 group">
+                        <div class="polaroid-frame transition-transform hover:rotate-2 duration-300 reveal-on-scroll"
+                            data-delay="180">
+                            <div class="aspect-[3/4] overflow-hidden rounded-sm">
+                                <img class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu92zqMFecDjUKfVy4KCvSBrI-i9Vxml2O9VFWoSRfuE2zNdB5oRASIlsZS9vTVwJoTDONN41oXt9U7oV6VZAysajCNqYH21iLiJCTIvoQEvKHucxmEehZuIYYn9-cCZgt9f9gxnfDmWseeaXPGsXMKuQR2NT7f57187SHRI_elcXwKX67oMEy5uLwT9fRs9bNOYy7D-K2VzUDeW0fUkznHAAooOUNWKBSTr8nfn1dnq3YeBTSHpO7" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1 group">
+                        <div class="polaroid-frame transition-transform hover:-rotate-2 duration-300 reveal-on-scroll"
+                            data-delay="350">
+                            <div class="aspect-[3/4] overflow-hidden rounded-sm">
+                                <img class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb4Pf5_z-Lfc67t__BYGqPsm_tKz3UR5fB67IHgQ2qWilGLnyTI83ctTToJyE66yl6d0vMDOMR1Tm9jxjDrV6ls96zjl82Ae8tQFKLwcyzor0YEpv9wjlvCxecphzGk_YNl01NmBZsGTWWON9g9FIdPJgRiCODaulFUZb-FWDNruymBPXnn45oJfN5ru0kzSNKv9DNm45tq1xre03jWy6JHH4OHSgJk9F_wXADee8Ay3uwfBOMH2_H" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-2 group">
+                        <div class="polaroid-frame transition-transform hover:rotate-1 duration-300 reveal-on-scroll"
+                            data-delay="500">
+                            <div class="aspect-[16/9] overflow-hidden rounded-sm">
+                                <img class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcfPGgOs8rTuEDEG6hZ_0_cLJAt1qG8kkDsdxA03oLSKJvne8gN_jUv_p9Pnk5B2FvF5OyTYDuHsXjXs0HiCyLJF8eiB2UNQ9T04Z1CKSZOX4hzi5K89fIpC_Qp1qN1e_ptOLVNJ2Nme3cRTeDa300dkGpKxpKhwmnyS0j36xxqDIJJXEghpJ40m-54yLnPQ-K7vEGi6-EguFSIAFvSZ4UIrxCr1wqUadVu6Xn51lapVeKU5yJbqwm" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 2. Horizontal Scrolling Carousel (Daily Life) -->
+            <section class="mb-section-gap">
+                <div class="flex justify-between items-end mb-10">
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute -left-8 -top-4 text-primary-container/40 animate-spin-slow">auto_awesome</span>
+                        <h3 class="font-headline-md text-primary">Snapshot Ngày Thường</h3>
+                        <p class="text-secondary font-italic-accent text-base">Những góc nhỏ thân thuộc</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <!-- Image 1 -->
+                    <div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative"
+                        data-index="0" data-delay="0">
+                        <div class="aspect-square overflow-hidden rounded-sm relative">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G" />
+                            <div
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative"
+                        data-index="1" data-delay="150">
+                        <div class="aspect-square overflow-hidden rounded-sm relative">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKvL_jdcu59AAKcezc4Wg2zF0llDrgiZzgK7iiqyYJHz87nFcTBCporgKDTqBY7J6ZUen76Jl84TKY1vn5v_EdEJHGnsar78a8O65zYaKz1oXHCffoFmFIPU5k7bZh3ChFUFkiZOKqQWmEFb28WWSNGnq3Xc4-G1jhKgY1KmrNW_XV4hg4_5KFne_M6kDHA0ikx9O03F6SlV5hzm3-2cz6XnZKC5dLBPNe5JmZiNB4qSQF9R6so70Y" />
+                            <div
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative"
+                        data-index="2" data-delay="300">
+                        <div class="aspect-square overflow-hidden rounded-sm relative">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmnc4KKgg_48iHFO0l8QZrSVl8PaKjtDl_41rr6SisXvIPRrHqVDrRekKjIMfzh8nCk3ucFde6Z3gfjtX5ngZc0J6BK__7jk1exKJHJEU_WlCcDKtd-6RNo8u3POukC44lirHf_VKZuFgaZjalSsDuhUNhXE2ogLDYNB6xyGXjntL4U5tXnamh3W0CmyWyHOS0FrST6RbT0unla4bh4pHaetKSjkIEb4pSetQRCvdUfjaN-mjGQ9Sr" />
+                            <div
+                                class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                                <span
+                                    class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image 4 with Overlay -->
+                    <div class="polaroid-frame relative group cursor-pointer reveal-on-scroll snapshot-card"
+                        data-index="3" data-delay="450">
+                        <div class="aspect-square overflow-hidden rounded-sm relative">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPfDaiwEDldhRjUkrBARTHwTZujgwAbkLwn7FXlNgM_zO7Gw5pJZZKj79jDWGTyCKOU_s6pvL3MfD997IA-8V-kuAPzGl_RcpTldcurtkhIvVKhMKm8MkMgjF--myIFZJVXNQjdV693G4_PV5JyBFiUIjxWI_pT7rvaZ8yomStlWzc8SB2-fK8bafqoMAnYOOEbZ2e-0A4hZH4oARLq5jAmyQGhGPu8824svHNf12phRZZ7CVjIe7" />
+                            <div
+                                class="absolute inset-0 bg-black/55 flex flex-col items-center justify-center transition-colors group-hover:bg-black/65">
+                                <span class="text-white font-headline-md text-3xl">+12</span>
+                                <span class="text-white/90 text-xs font-label-caps mt-1 flex items-center gap-1"><span
+                                        class="material-symbols-outlined text-sm">photo_library</span> Xem Trọn
+                                    Album</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 3. Structured 2-Column Grid (Professional Portraits) -->
+            <section class="mb-section-gap relative overflow-x-clip">
+                <div class="absolute -right-20 top-1/2 -translate-y-1/2 text-primary-container/10 -z-10 rotate-45">
+                    <span class="material-symbols-outlined text-[200px]">auto_awesome</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="polaroid-frame max-w-sm mx-auto transform -rotate-2 shadow-2xl relative reveal-on-scroll reveal-left"
+                            data-delay="100">
+                            <!-- Decor Flower -->
+                            <div class="absolute -top-6 -right-6 text-secondary-fixed-dim/60">
+                                <span class="material-symbols-outlined text-5xl">filter_vintage</span>
+                            </div>
+                            <div class="aspect-[4/5] overflow-hidden rounded-sm">
+                                <img class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA586fSMba61w_T1lG3QDz9XqbzU_T6ZZRSid8a0vyYVNq-E7s7D2t28CdjRCNP8bU8JLWfl1KjpOSJ4n4UhVvMcbaGPI01BkM55_hEfbZ0EY7poZ7y06e-aB2ylxsdO4kDmH5S_vV576WxjeMRFCLNkz5N4sAuzzO8gefghNeZiaQkGEh3_-1XpY2ZVEfCY81vUzeulHoUxClQASDsaUDN7RK47sltLsfBQAaa4zcCI66bwKahPWtz" />
+                            </div>
+                            <div class="mt-6 flex justify-center">
+                                <div class="washi-tape font-label-caps text-[11px] text-primary">CUM LAUDE 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 space-y-8 reveal-on-scroll reveal-right" data-delay="250">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-3">
+                                <div class="h-[1px] w-8 bg-secondary-fixed-dim"></div>
+                                <span class="font-label-caps text-[11px] text-secondary tracking-widest uppercase">Chân
+                                    Dung Thành Tựu</span>
+                            </div>
+                            <h4 class="font-headline-md text-primary text-4xl leading-tight">Vẻ Đẹp của<br />Tri Thức
+                            </h4>
+                        </div>
+                        <p class="font-body-lg text-on-surface-variant leading-relaxed max-w-md">
+                            Từng bước đi trong suốt 4 năm qua không chỉ là những bài giảng trên giảng đường, mà còn là
+                            hành trình khám phá bản thân và trưởng thành trong suy nghĩ.
+                        </p>
+                        <div class="pt-8 border-t border-outline-variant/30 relative">
+                            <span
+                                class="material-symbols-outlined absolute -top-4 left-0 text-primary-container/40">format_quote</span>
+                            <p class="font-italic-accent text-primary text-xl pl-6">"Học vấn là chìa khóa mở cánh cửa
+                                tương lai."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 4. Family & Friends Scrapbook Album (1 Ảnh To & Nhiều Ảnh Nhỏ Xung Quanh) -->
+            <section class="mb-12 relative overflow-x-clip">
+                <!-- Heading close to photos -->
+                <div class="text-center mb-6 relative">
+                    <h3 class="font-headline-md text-primary text-3xl md:text-4xl">Người Bạn Đồng Hành</h3>
+                    <p class="text-secondary font-italic-accent mt-1">Phía sau mỗi thành công là sự yêu thương &amp; sẻ
+                        chia</p>
+                    <div
+                        class="absolute -top-8 left-1/2 -translate-x-1/2 text-primary-container/15 pointer-events-none">
+                        <span class="material-symbols-outlined text-[70px]">favorite</span>
+                    </div>
+                </div>
+                <!-- Layout: 1 Ảnh To Chính Giữa & Nhiều Ảnh Nhỏ Xung Quanh -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-center max-w-6xl mx-auto px-2">
+                    <!-- Left Column (2 Small Photos) -->
+                    <div class="flex flex-col gap-6">
+                        <!-- Small Photo 1 (Slide from left) -->
+                        <div class="polaroid-frame transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-left"
+                            data-delay="100">
+                            <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVEy9npL0lhZfVMzv13BkfnTGDnLb24D-uxDDhwvB4PvAepGXN3lf5hYt9-znoL5bXhbXkzIgRntM3puVdy0UoOQ4a207Jo2nmgMFAzVLXYUjfDWBdVAQdIoYi0SbejtpHMDxoVmjsCtE1bbBV4wGotSi-O4ZhU2NjPPtIIiYyIjRwOzi63zH5n1oVebD2IjoEoeeENHLSnz_kP4jk5hz4dZU-1KkcdhyaQxSM2oo0oqWXjtwGhjKb" />
+                            </div>
+                            <div class="mt-2 flex justify-between items-center text-xs">
+                                <span class="font-italic-accent text-primary">Khoảnh Khắc Đáng Nhớ</span>
+                                <span class="material-symbols-outlined text-xs text-secondary-fixed-dim">sparkles</span>
+                            </div>
+                        </div>
+                        <!-- Small Photo 2 (Slide from left delay 300ms) -->
+                        <div class="polaroid-frame transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-left"
+                            data-delay="300">
+                            <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrlF-AohaaSfFS6HdyL10VFv9E2rQLNv7VIZ4E35RalFxjStmMPm85w84I1Td7lUkC590OUtZkg744ec7mra4wZIddNiLkj25cANG-fNjkJUaeb3erAqmM0k9XtdGnuQzUSAqDkOKG1XXYwr3kmU1ZzAZxWL1H18013eRgz8Zww8cs2uMi-NQp8swH1zDHCttwhD63tfbQ-ttREQ1oafQZkQlcO8Ib7GNvSiZsVS8FQt2rXlHRE4lO" />
+                            </div>
+                            <div class="mt-2 flex justify-between items-center text-xs">
+                                <span class="font-italic-accent text-primary">Thanh Xuân Bên Nhau 🌸</span>
+                                <span class="washi-tape font-label-caps text-[8px] text-primary">FRIENDS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Center Column: 1 BIG HERO PHOTO + 2 Small Photos Below -->
+                    <div class="sm:col-span-2 flex flex-col gap-6">
+                        <!-- 1 BIG CENTER HERO PHOTO (Slide up from bottom) -->
+                        <div class="polaroid-frame transform hover:scale-[1.02] transition-all duration-500 shadow-2xl border-2 border-primary/20 group reveal-on-scroll"
+                            data-delay="0">
+                            <div class="aspect-[16/11] overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmWxzvfZuM7c_QvZuyrHCBxg3uA1TLMjosWIHTdHO3C8jWOVjBIf0Yw9dECL-RztSOs4OV_8F6VGmcvqrK8JH7ZFAgLD-WVu0nM_HQa_w9JoT-rkwslZWBXH7U7rJjhto4CbpnS-n_KaB2HRqRoAcijIepemF6puVzvQ_z9NyBBhJTpzR0cHI9oRS514W_BeMBp2ikAh_DTu1xsblLBR2NLdaMsIIrM8DE5jtV-G42wHRGZKd3mGI_" />
+                                <div class="absolute bottom-4 right-4 speech-bubble-tag">
+                                    <span class="font-headline-sm text-primary text-base">Gia Đình Là Điểm Tựa ❤️</span>
+                                </div>
+                            </div>
+                            <div class="mt-3 flex justify-between items-center">
+                                <span class="font-italic-accent text-base text-primary font-bold">With Family &amp;
+                                    Loved Ones</span>
+                                <div class="washi-tape font-label-caps text-[10px] text-primary">SPOTLIGHT 2024</div>
+                            </div>
+                        </div>
+                        <!-- 2 Small Photos Directly Below Big Photo -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="polaroid-frame transform -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll"
+                                data-delay="200">
+                                <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
+                                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu92zqMFecDjUKfVy4KCvSBrI-i9Vxml2O9VFWoSRfuE2zNdB5oRASIlsZS9vTVwJoTDONN41oXt9U7oV6VZAysajCNqYH21iLiJCTIvoQEvKHucxmEehZuIYYn9-cCZgt9f9gxnfDmWseeaXPGsXMKuQR2NT7f57187SHRI_elcXwKX67oMEy5uLwT9fRs9bNOYy7D-K2VzUDeW0fUkznHAAooOUNWKBSTr8nfn1dnq3YeBTSHpO7" />
+                                </div>
+                                <div class="mt-2 text-center text-xs font-italic-accent text-primary">Nụ Cười Rạng Rỡ
+                                </div>
+                            </div>
+                            <div class="polaroid-frame transform rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll"
+                                data-delay="350">
+                                <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
+                                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G" />
+                                </div>
+                                <div class="mt-2 text-center text-xs font-italic-accent text-primary">Kỷ Niệm Sân Trường
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column (2 Small Photos) -->
+                    <div class="flex flex-col gap-6">
+                        <!-- Small Photo 5 (Slide from right delay 200ms) -->
+                        <div class="polaroid-frame transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-right"
+                            data-delay="200">
+                            <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPfDaiwEDldhRjUkrBARTHwTZujgwAbkLwn7FXlNgM_zO7Gw5pJZZKj79jDWGTyCKOU_s6pvL3MfD997IA-8V-kuAPzGl_RcpTldcurtkhIvVKhMKm8MkMgjF--myIFZJVXNQjdV693G4_PV5JyBFiUIjxWI_pT7rvaZ8yomStlWzc8SB2-fK8bafqoMAnYOOEbZ2e-0A4hZH4oARLq5jAmyQGhGPu8824svHNf12phRZZ7CVjIe7" />
+                            </div>
+                            <div class="mt-2 flex justify-between items-center text-xs">
+                                <span class="font-italic-accent text-primary">Ngày Vui Trọn Vẹn ✨</span>
+                                <span class="material-symbols-outlined text-xs text-secondary-fixed-dim">favorite</span>
+                            </div>
+                        </div>
+                        <!-- Small Photo 6 (Slide from right delay 450ms) -->
+                        <div class="polaroid-frame transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-right"
+                            data-delay="450">
+                            <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
+                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc1DbsUeGQBQtvi0jxrbK2uL-_kfFJ8-g7WCaxMy-CWuLbY20gb9aX2IcBKR2gfp3XDn1nZjO76HtVY5QZ-VHbVepj8a_Xq8ibEib_byVSbWyBq1YXC1VxljhsTPh2zNX_u88QSVTR7iimDf4DBkD2ZmU8MnocUepb_seWn4080TSxyIq3d47WaI88ecB4LO3Y-hsTLmrAlNQTNA-TDLg21baqNJX1TuXX7PKDACR4bCrZKoMgrrPf" />
+                            </div>
+                            <div class="mt-2 flex justify-between items-center text-xs">
+                                <span class="font-italic-accent text-primary">Khoảnh Khắc Tốt Nghiệp</span>
+                                <span class="washi-tape font-label-caps text-[8px] text-primary">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Event Details Section (Time & Date / Real Interactive Map) at Bottom -->
+            <section class="mt-10 mb-2 max-w-4xl mx-auto px-4 reveal-on-scroll">
+                <div class="bg-white/85 backdrop-blur-md rounded-3xl border border-white shadow-2xl overflow-hidden">
+                    <!-- Top Details Banner -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-3 items-center gap-6 p-8 border-b border-outline-variant/20">
+                        <!-- Time & Date -->
+                        <div class="text-center md:text-left flex flex-col items-center md:items-start">
+                            <span
+                                class="inline-flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant mb-1 tracking-widest">
+                                <span class="material-symbols-outlined text-sm text-primary">calendar_month</span> TIME
+                                &amp; DATE
+                            </span>
+                            <p class="font-headline-sm text-primary text-2xl font-bold">18.05.2024</p>
+                            <p class="font-body-md text-secondary mt-1">09:30 — 12:00</p>
+                        </div>
+                        <!-- Center Decorative Badge -->
+                        <div class="flex flex-col items-center justify-center text-primary-container/70 my-2 md:my-0">
+                            <span class="material-symbols-outlined text-5xl animate-pulse">local_florist</span>
+                            <span class="font-italic-accent text-xs text-primary mt-1">Lễ Tốt Nghiệp</span>
+                        </div>
+                        <!-- Location Info -->
+                        <div class="text-center md:text-right flex flex-col items-center md:items-end">
+                            <span
+                                class="inline-flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant mb-1 tracking-widest">
+                                <span class="material-symbols-outlined text-sm text-primary">location_on</span> LOCATION
+                            </span>
+                            <p class="font-body-md font-semibold text-primary text-lg">Đại học Công nghệ Đông Á</p>
+                            <p class="font-body-md text-on-surface-variant text-sm mt-0.5">Trịnh Văn Bô, Xuân Phương, Hà
+                                Nội</p>
+                            <a href="https://maps.google.com/?q=Đại+học+Công+nghệ+Đông+Á+Hà+Nội" target="_blank"
+                                rel="noopener noreferrer"
+                                class="mt-3 inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary text-white rounded-full text-xs font-medium hover:bg-primary/90 transition-all shadow-sm">
+                                <span class="material-symbols-outlined text-sm">directions</span> Chỉ đường Google Maps
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Interactive Real Google Map Embed -->
+                    <div class="relative w-full h-[360px] md:h-[420px] bg-surface-variant/30">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863855881404!2d105.74459841533214!3d21.03813279283542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgxJDDtG5nIMOB!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full object-cover">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+            <!-- Thank You Letter Section (Lời Cảm Ơn) -->
+            <section class="mt-8 mb-12 max-w-3xl mx-auto px-4 reveal-on-scroll">
+                <div
+                    class="bg-white/90 backdrop-blur-md rounded-3xl border border-white p-8 md:p-12 shadow-2xl relative overflow-hidden text-center">
+                    <!-- Subtle Background Watermark -->
+                    <div class="absolute -right-12 -top-12 text-rose-300/25 pointer-events-none">
+                        <span class="material-symbols-outlined text-[180px]">local_florist</span>
+                    </div>
+                    <div class="absolute -left-12 -bottom-12 text-amber-300/25 pointer-events-none">
+                        <span class="material-symbols-outlined text-[180px]">filter_vintage</span>
+                    </div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <!-- Floral Badge -->
+                        <div
+                            class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-rose-50 border border-rose-200 text-rose-500 mb-4 shadow-md">
+                            <span class="material-symbols-outlined text-3xl animate-pulse">local_florist</span>
+                        </div>
+                        <span
+                            class="font-label-caps text-[11px] text-rose-600 tracking-[0.3em] uppercase mb-2 font-semibold">Lời
+                            Cảm Ơn Chân Thành</span>
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="material-symbols-outlined text-rose-400 text-xl">filter_vintage</span>
+                            <h3 class="font-headline-md text-primary text-3xl md:text-4xl">Trân Trọng &amp; Tri Ân</h3>
+                            <span class="material-symbols-outlined text-rose-400 text-xl">filter_vintage</span>
+                        </div>
+                        <!-- Divider -->
+                        <div class="w-20 h-[2px] bg-gradient-to-r from-transparent via-rose-400 to-transparent mb-8">
+                        </div>
+                        <!-- Message Body -->
+                        <div
+                            class="font-body-lg text-on-surface-variant leading-relaxed space-y-4 max-w-xl mx-auto text-base md:text-lg">
+                            <p>
+                                Hành trình 4 năm đại học khép lại, để lại những kỷ niệm vô giá và hành trang tri thức
+                                vững chắc cho tương lai.
+                            </p>
+                            <p>
+                                Con xin gửi lời tri ân sâu sắc nhất tới <strong class="text-primary font-semibold">Bố Mẹ
+                                    và Gia đình</strong> — điểm tựa yêu thương đã luôn hy sinh và nâng bước con. Xin
+                                chân thành cảm ơn các <strong class="text-primary font-semibold">Thầy Cô giáo</strong>
+                                và những <strong class="text-primary font-semibold">Người bạn tuyệt vời</strong> đã luôn
+                                đồng hành, chỉ bảo và sẻ chia từng khoảnh khắc thanh xuân.
+                            </p>
+                            <p class="font-italic-accent text-primary italic text-lg md:text-xl pt-2">
+                                "Sự hiện diện của quý vị là niềm vinh hạnh và hạnh phúc lớn nhất trong ngày vui trọn vẹn
+                                này!"
+                            </p>
+                        </div>
+                        <!-- Signature -->
+                        <div class="mt-10 flex flex-col items-center">
+                            <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">WITH ALL
+                                MY LOVE,</p>
+                            <p class="font-headline-sm text-primary text-2xl font-bold">Nguyễn Thị Hương</p>
+                            <div class="washi-tape font-label-caps text-[9px] text-primary mt-3">CLASS OF 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full pt-10 pb-16 bg-white/60 border-t border-outline-variant/20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5 pointer-events-none">
+                <div class="absolute top-10 left-10"><span
+                        class="material-symbols-outlined text-8xl">filter_vintage</span></div>
+                <div class="absolute bottom-10 right-10"><span
+                        class="material-symbols-outlined text-8xl">auto_awesome</span></div>
+            </div>
+            <div class="flex flex-col items-center gap-6 px-8 text-center relative z-10">
+                <h2 class="font-display-lg text-primary text-4xl">Hành Trình Tiếp Nối</h2>
+                <div class="w-16 h-[1px] bg-primary/20"></div>
+                <p class="font-italic-accent text-tertiary italic text-lg max-w-md">"Kết thúc một chương sách để bắt đầu
+                    một hành trình rực rỡ hơn."</p>
+                <p class="font-label-caps text-[10px] text-on-surface-variant tracking-[0.3em] mt-8">© 2024 CLASS OF
+                    EXCELLENCE</p>
+                <div class="flex gap-12 mt-4">
+                    <a class="font-label-caps text-[10px] text-primary hover:text-secondary transition-colors tracking-widest"
+                        href="#">CONTACT</a>
+                    <a class="font-label-caps text-[10px] text-primary hover:text-secondary transition-colors tracking-widest"
+                        href="#">RSVP</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- BottomNavBar -->
+    <script>
+        // Carousel navigation
+        const scrollContainer = document.querySelector('.overflow-x-auto');
+        const buttons = document.querySelectorAll('button');
+        const prevBtn = buttons[1]; // Adjust based on position
+        const nextBtn = buttons[2];
+
+        if (nextBtn && prevBtn && scrollContainer) {
+            nextBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+            prevBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+        }
+
+        // Parallax effect for cards
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const polaroids = document.querySelectorAll('.polaroid-frame');
+            polaroids.forEach((card, index) => {
+                const speed = (index % 3 + 1) * 0.02;
+                const rotation = card.classList.contains('rotate-1') ? 1 :
+                    card.classList.contains('-rotate-1') ? -1 :
+                        card.classList.contains('rotate-2') ? 2 :
+                            card.classList.contains('-rotate-2') ? -2 : 0;
+                // card.style.transform = `translateY(${scrolled * speed}px) rotate(${rotation}deg)`;
+            });
+        });
+    </script>
+    <div class="fixed bottom-8 right-8 z-50 group opacity-0 pointer-events-none transition-opacity duration-1000"
+        id="music-player-container">
+        <!-- Audio Element -->
+        <audio id="bg-music" loop="" preload="auto">
+            <source src="music.mp3" type="audio/mpeg" />
+        </audio>
+        <!-- Interactive Vinyl Button -->
+        <button aria-label="Bật/Tắt Nhạc"
+            class="relative w-16 h-16 focus:outline-none transition-transform active:scale-95 group/btn"
+            id="music-toggle-btn">
+            <!-- Pulse Ring when playing -->
+            <div class="absolute inset-0 rounded-full bg-primary/30 animate-ping opacity-75 hidden" id="music-pulse">
+            </div>
+            <!-- Vinyl Disc -->
+            <div class="relative w-full h-full bg-zinc-900 rounded-full shadow-2xl border-4 border-white/80 flex items-center justify-center animate-spin-slow spin-paused"
+                id="vinyl-disc">
+                <!-- Vinyl Grooves -->
+                <div class="absolute inset-1 rounded-full border border-white/10"></div>
+                <div class="absolute inset-3 rounded-full border border-white/10"></div>
+                <div class="absolute inset-5 rounded-full border border-white/10"></div>
+                <!-- Center Label -->
+                <div
+                    class="w-6 h-6 bg-primary rounded-full border-2 border-zinc-800 flex items-center justify-center relative">
+                    <div class="w-1.5 h-1.5 bg-white rounded-full"></div>
+                </div>
+            </div>
+            <!-- Playing Badge / Muted Badge -->
+            <div class="absolute -top-1 -right-1 w-6 h-6 bg-primary text-white rounded-full shadow-md flex items-center justify-center hidden"
+                id="music-playing-badge">
+                <span class="material-symbols-outlined text-[13px]">music_note</span>
+            </div>
+            <div class="absolute -top-1 -right-1 w-6 h-6 bg-white/95 text-primary rounded-full shadow-md border border-outline-variant flex items-center justify-center"
+                id="music-muted-badge">
+                <span class="material-symbols-outlined text-[13px]">volume_off</span>
+            </div>
+        </button>
+        <!-- Tooltip/Label -->
+        <div
+            class="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div class="bg-white px-3 py-1.5 rounded-full shadow-lg border border-outline-variant text-[10px] font-label-caps text-primary whitespace-nowrap"
+                id="music-tooltip">ĐANG TẮT NHẠC • BẤM ĐỂ BẬT NHẠC</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('bg-music');
+            const toggleBtn = document.getElementById('music-toggle-btn');
+            const vinylDisc = document.getElementById('vinyl-disc');
+            const pulseRing = document.getElementById('music-pulse');
+            const mutedBadge = document.getElementById('music-muted-badge');
+            const playingBadge = document.getElementById('music-playing-badge');
+            const tooltip = document.getElementById('music-tooltip');
+
+            let isPlaying = false;
+
+            const updateUI = () => {
+                if (isPlaying) {
+                    vinylDisc.classList.remove('spin-paused');
+                    pulseRing.classList.remove('hidden');
+                    mutedBadge.classList.add('hidden');
+                    playingBadge.classList.remove('hidden');
+                    tooltip.textContent = 'DỪNG NHẠC • NOW PLAYING';
+                } else {
+                    vinylDisc.classList.add('spin-paused');
+                    pulseRing.classList.add('hidden');
+                    mutedBadge.classList.remove('hidden');
+                    playingBadge.classList.add('hidden');
+                    tooltip.textContent = 'BẬT NHẠC • CLICK TO PLAY';
+                }
+            };
+
+            const playMusic = () => {
+                audio.play().then(() => {
+                    isPlaying = true;
+                    updateUI();
+                }).catch(err => {
+                    console.log('Autoplay chờ tương tác người dùng:', err);
+                    isPlaying = false;
+                    updateUI();
+                });
+            };
+
+            const pauseMusic = () => {
+                audio.pause();
+                isPlaying = false;
+                updateUI();
+            };
+
+            toggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (isPlaying) {
+                    pauseMusic();
+                } else {
+                    playMusic();
+                }
+            });
+
+            // Tự động phát nhạc ngay khi tải trang
+            playMusic();
+
+            // Cơ chế thông minh: Nếu trình duyệt chặn Autoplay (do chính sách âm thanh), tự động phát ngay tại cú click/cuộn/chạm đầu tiên trên trang
+            const enableAutoplayFallback = () => {
+                if (!isPlaying) {
+                    playMusic();
+                }
+                window.removeEventListener('click', enableAutoplayFallback);
+                window.removeEventListener('touchstart', enableAutoplayFallback);
+                window.removeEventListener('scroll', enableAutoplayFallback);
+                window.removeEventListener('keydown', enableAutoplayFallback);
+            };
+
+            window.addEventListener('click', enableAutoplayFallback);
+            window.addEventListener('touchstart', enableAutoplayFallback);
+            window.addEventListener('scroll', enableAutoplayFallback);
+            window.addEventListener('keydown', enableAutoplayFallback);
+
+            // IntersectionObserver cho hiệu ứng Scroll Slide-in & Fade-in mượt mà
+            const revealElements = document.querySelectorAll('.reveal-on-scroll');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.12
+            };
+
+            const revealObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const delay = el.getAttribute('data-delay') || 0;
+                        setTimeout(() => {
+                            el.classList.add('is-revealed');
+                        }, parseInt(delay));
+                        obs.unobserve(el);
+                    }
+                });
+            }, observerOptions);
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Lightbox Modal cho Snapshot Ngày Thường
+            const snapshotGallery = [
+                {
+                    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G",
+                    caption: "Góc nhỏ sân trường thân quen — 2024"
+                },
+                {
+                    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDKvL_jdcu59AAKcezc4Wg2zF0llDrgiZzgK7iiqyYJHz87nFcTBCporgKDTqBY7J6ZUen76Jl84TKY1vn5v_EdEJHGnsar78a8O65zYaKz1oXHCffoFmFIPU5k7bZh3ChFUFkiZOKqQWmEFb28WWSNGnq3Xc4-G1jhKgY1KmrNW_XV4hg4_5KFne_M6kDHA0ikx9O03F6SlV5hzm3-2cz6XnZKC5dLBPNe5JmZiNB4qSQF9R6so70Y",
+                    caption: "Khoảnh khắc ôn bài dưới tán cây"
+                },
+                {
+                    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDmnc4KKgg_48iHFO0l8QZrSVl8PaKjtDl_41rr6SisXvIPRrHqVDrRekKjIMfzh8nCk3ucFde6Z3gfjtX5ngZc0J6BK__7jk1exKJHJEU_WlCcDKtd-6RNo8u3POukC44lirHf_VKZuFgaZjalSsDuhUNhXE2ogLDYNB6xyGXjntL4U5tXnamh3W0CmyWyHOS0FrST6RbT0unla4bh4pHaetKSjkIEb4pSetQRCvdUfjaN-mjGQ9Sr",
+                    caption: "Nụ cười rạng rỡ trước kỳ thi cuối"
+                },
+                {
+                    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBCPfDaiwEDldhRjUkrBARTHwTZujgwAbkLwn7FXlNgM_zO7Gw5pJZZKj79jDWGTyCKOU_s6pvL3MfD997IA-8V-kuAPzGl_RcpTldcurtkhIvVKhMKm8MkMgjF--myIFZJVXNQjdV693G4_PV5JyBFiUIjxWI_pT7rvaZ8yomStlWzc8SB2-fK8bafqoMAnYOOEbZ2e-0A4hZH4oARLq5jAmyQGhGPu8824svHNf12phRZZ7CVjIe7",
+                    caption: "Ngày lễ tốt nghiệp ý nghĩa trọn vẹn"
+                },
+                {
+                    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCmWxzvfZuM7c_QvZuyrHCBxg3uA1TLMjosWIHTdHO3C8jWOVjBIf0Yw9dECL-RztSOs4OV_8F6VGmcvqrK8JH7ZFAgLD-WVu0nM_HQa_w9JoT-rkwslZWBXH7U7rJjhto4CbpnS-n_KaB2HRqRoAcijIepemF6puVzvQ_z9NyBBhJTpzR0cHI9oRS514W_BeMBp2ikAh_DTu1xsblLBR2NLdaMsIIrM8DE5jtV-G42wHRGZKd3mGI_",
+                    caption: "Gia đình và những người thương yêu nhất"
+                },
+                {
+                    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCrlF-AohaaSfFS6HdyL10VFv9E2rQLNv7VIZ4E35RalFxjStmMPm85w84I1Td7lUkC590OUtZkg744ec7mra4wZIddNiLkj25cANG-fNjkJUaeb3erAqmM0k9XtdGnuQzUSAqDkOKG1XXYwr3kmU1ZzAZxWL1H18013eRgz8Zww8cs2uMi-NQp8swH1zDHCttwhD63tfbQ-ttREQ1oafQZkQlcO8Ib7GNvSiZsVS8FQt2rXlHRE4lO",
+                    caption: "Hội bạn thân 4 năm thanh xuân bên nhau"
+                }
+            ];
+
+            let currentLightboxIndex = 0;
+            const lightbox = document.getElementById('snapshot-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxCounter = document.getElementById('lightbox-counter');
+            const lightboxContent = document.getElementById('lightbox-content');
+
+            const openLightbox = (index) => {
+                currentLightboxIndex = index;
+                updateLightboxView();
+                lightbox.classList.remove('opacity-0', 'pointer-events-none');
+                lightbox.classList.add('opacity-100');
+                lightboxContent.classList.remove('scale-95');
+                lightboxContent.classList.add('scale-100');
+            };
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('opacity-100');
+                lightbox.classList.add('opacity-0', 'pointer-events-none');
+                lightboxContent.classList.remove('scale-100');
+                lightboxContent.classList.add('scale-95');
+            };
+
+            const updateLightboxView = () => {
+                const item = snapshotGallery[currentLightboxIndex];
+                lightboxImg.style.opacity = '0';
+                setTimeout(() => {
+                    lightboxImg.src = item.src;
+                    lightboxCaption.textContent = item.caption;
+                    lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${snapshotGallery.length}`;
+                    lightboxImg.style.opacity = '1';
+                }, 120);
+            };
+
+            const nextLightbox = () => {
+                currentLightboxIndex = (currentLightboxIndex + 1) % snapshotGallery.length;
+                updateLightboxView();
+            };
+
+            const prevLightbox = () => {
+                currentLightboxIndex = (currentLightboxIndex - 1 + snapshotGallery.length) % snapshotGallery.length;
+                updateLightboxView();
+            };
+
+            document.querySelectorAll('.snapshot-card').forEach((card, idx) => {
+                card.addEventListener('click', () => {
+                    const indexAttr = card.getAttribute('data-index');
+                    const idxToOpen = indexAttr !== null ? parseInt(indexAttr) : idx;
+                    openLightbox(idxToOpen);
+                });
+            });
+
+            document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+            document.getElementById('lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); nextLightbox(); });
+            document.getElementById('lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); prevLightbox(); });
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            window.addEventListener('keydown', (e) => {
+                if (lightbox.classList.contains('opacity-100')) {
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowRight') nextLightbox();
+                    if (e.key === 'ArrowLeft') prevLightbox();
+                }
+            });
+
+            // Particle System for Watercolors Petals
+            function createPetals() {
+                const container = document.getElementById('particle-container');
+                const colors = ['#f4c2c2', '#ffdad9', '#ecbaba', '#d4c2c2'];
+
+                for (let i = 0; i < 15; i++) {
+                    const petal = document.createElement('div');
+                    petal.className = 'petal';
+
+                    const size = Math.random() * 20 + 10;
+                    petal.style.width = `${size}px`;
+                    petal.style.height = `${size}px`;
+                    petal.style.left = `${Math.random() * 100}vw`;
+                    petal.style.top = `110vh`;
+                    petal.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    petal.style.borderRadius = '50% 0 50% 50%';
+                    petal.style.filter = 'blur(1px)';
+                    petal.style.animationDuration = `${Math.random() * 5 + 7}s`;
+                    petal.style.animationDelay = `${Math.random() * 10}s`;
+
+                    container.appendChild(petal);
+                }
+            }
+
+            createPetals();
+
+            // Atmospheric Sparkles
+            function createSparkles() {
+                const container = document.getElementById('particle-container');
+                for (let i = 0; i < 20; i++) {
+                    const sparkle = document.createElement('div');
+                    sparkle.className = 'absolute bg-secondary-fixed opacity-0 rounded-full';
+                    const size = Math.random() * 3;
+                    sparkle.style.width = `${size}px`;
+                    sparkle.style.height = `${size}px`;
+                    sparkle.style.left = `${Math.random() * 100}vw`;
+                    sparkle.style.top = `${Math.random() * 100}vh`;
+
+                    sparkle.animate([
+                        { opacity: 0, transform: 'scale(0)' },
+                        { opacity: 0.6, transform: 'scale(1.5)' },
+                        { opacity: 0, transform: 'scale(0)' }
+                    ], {
+                        duration: 2000 + Math.random() * 3000,
+                        iterations: Infinity,
+                        delay: Math.random() * 5000
+                    });
+
+                    container.appendChild(sparkle);
+                }
+            }
+            createSparkles();
+
+            // Envelope Screen Interaction & Transition to main-wrapper
+            let envelopeOpened = false;
+            window.openEnvelope = function () {
+                if (envelopeOpened) return;
+                envelopeOpened = true;
+
+                const container = document.querySelector('.envelope-container');
+                const invitation = document.getElementById('invitation-card');
+                const seal = document.getElementById('seal');
+                const envelopeScreen = document.getElementById('envelope-screen');
+                const mainWrapper = document.getElementById('main-wrapper');
+                const musicContainer = document.getElementById('music-player-container');
+
+                // Open animation
+                container.classList.add('envelope-open');
+                if (seal) {
+                    seal.style.opacity = "0";
+                    seal.style.pointerEvents = "none";
+                }
+
+                // Play music on click/open
+                playMusic();
+
+                setTimeout(() => {
+                    if (invitation) {
+                        invitation.classList.remove('opacity-0', 'translate-y-4');
+                        invitation.classList.add('opacity-100', '-translate-y-24', 'scale-110');
+                    }
+                }, 400);
+
+                // Transition to main screen
+                setTimeout(() => {
+                    if (envelopeScreen) {
+                        envelopeScreen.classList.add('opacity-0', 'pointer-events-none');
+                    }
+
+                    // Allow scrolling
+                    document.body.classList.remove('max-h-screen', 'overflow-y-hidden');
+
+                    // Reveal main content & music player
+                    if (mainWrapper) {
+                        mainWrapper.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-8');
+                        mainWrapper.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+                    }
+                    if (musicContainer) {
+                        musicContainer.classList.remove('opacity-0', 'pointer-events-none');
+                    }
+
+                    // Remove envelope overlay from DOM after transition completes
+                    setTimeout(() => {
+                        if (envelopeScreen) {
+                            envelopeScreen.remove();
+                        }
+                    }, 1200);
+                }, 2600);
+            };
+        });
+    </script>
+    <!-- Snapshot Lightbox Modal -->
+    <div id="snapshot-lightbox"
+        class="fixed inset-0 z-[100] bg-black/85 backdrop-blur-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4">
+        <!-- Close Button -->
+        <button id="lightbox-close"
+            class="absolute top-6 right-6 text-white/80 hover:text-white bg-white/15 hover:bg-white/25 p-3 rounded-full transition-all duration-200 z-[110] flex items-center justify-center">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+
+        <!-- Prev Button -->
+        <button id="lightbox-prev"
+            class="absolute left-4 md:left-8 text-white/80 hover:text-white bg-white/15 hover:bg-white/25 p-3 rounded-full transition-all duration-200 z-[110] flex items-center justify-center">
+            <span class="material-symbols-outlined text-3xl">chevron_left</span>
+        </button>
+
+        <!-- Next Button -->
+        <button id="lightbox-next"
+            class="absolute right-4 md:right-8 text-white/80 hover:text-white bg-white/15 hover:bg-white/25 p-3 rounded-full transition-all duration-200 z-[110] flex items-center justify-center">
+            <span class="material-symbols-outlined text-3xl">chevron_right</span>
+        </button>
+
+        <!-- Modal Content -->
+        <div id="lightbox-content"
+            class="relative max-w-4xl w-full flex flex-col items-center transform scale-95 transition-transform duration-300">
+            <div
+                class="polaroid-frame bg-white p-4 md:p-6 rounded-lg shadow-2xl max-h-[85vh] flex flex-col items-center">
+                <div class="overflow-hidden rounded max-h-[65vh] flex items-center justify-center">
+                    <img id="lightbox-img" src="" alt="Snapshot Detail"
+                        class="max-h-[65vh] w-auto object-contain rounded transition-all duration-300" />
+                </div>
+                <div class="mt-4 w-full flex justify-between items-center px-2 gap-4">
+                    <p id="lightbox-caption" class="font-italic-accent text-primary text-base md:text-lg font-semibold">
+                    </p>
+                    <span id="lightbox-counter"
+                        class="font-label-caps text-xs text-on-surface-variant bg-surface px-3 py-1 rounded-full border border-outline-variant/30 shrink-0"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
