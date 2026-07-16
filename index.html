@@ -191,20 +191,20 @@
             animation-play-state: paused !important;
         }
 
-        /* Scroll-triggered Slide-in & Fade-in Animations */
+        /* Scroll-triggered Slide-in & Fade-in Animations (Slide Presentation Style) */
         .reveal-on-scroll {
             opacity: 0;
-            transform: translateY(42px);
-            transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(60px);
+            transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1), transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
             will-change: opacity, transform;
         }
 
         .reveal-on-scroll.reveal-left {
-            transform: translateX(-42px);
+            transform: translateX(-65px);
         }
 
         .reveal-on-scroll.reveal-right {
-            transform: translateX(42px);
+            transform: translateX(65px);
         }
 
         .reveal-on-scroll.is-revealed {
@@ -433,7 +433,7 @@
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                     <div class="col-span-2 row-span-2 group">
-                        <div class="polaroid-frame h-full transition-transform hover:-rotate-1 duration-300 reveal-on-scroll"
+                        <div class="polaroid-frame h-full transition-transform hover:-rotate-1 duration-300 reveal-on-scroll reveal-left"
                             data-delay="0">
                             <div class="aspect-[4/5] md:aspect-auto md:h-full overflow-hidden rounded-sm">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -445,16 +445,16 @@
                         </div>
                     </div>
                     <div class="col-span-1 group">
-                        <div class="polaroid-frame transition-transform hover:rotate-2 duration-300 reveal-on-scroll"
-                            data-delay="180">
+                        <div class="polaroid-frame transition-transform hover:rotate-2 duration-300 reveal-on-scroll reveal-right"
+                            data-delay="200">
                             <div class="aspect-[3/4] overflow-hidden rounded-sm">
                                 <img class="w-full h-full object-cover" src="./media/goctrencao.jpg" />
                             </div>
                         </div>
                     </div>
                     <div class="col-span-1 group">
-                        <div class="polaroid-frame transition-transform hover:-rotate-2 duration-300 reveal-on-scroll"
-                            data-delay="350">
+                        <div class="polaroid-frame transition-transform hover:-rotate-2 duration-300 reveal-on-scroll reveal-right"
+                            data-delay="400">
                             <div class="aspect-[3/4] overflow-hidden rounded-sm">
                                 <img class="w-full h-full object-cover" src="./media/anh1.jpg" />
                             </div>
@@ -462,7 +462,7 @@
                     </div>
                     <div class="col-span-2 group">
                         <div class="polaroid-frame transition-transform hover:rotate-1 duration-300 reveal-on-scroll"
-                            data-delay="500">
+                            data-delay="250">
                             <div class="aspect-[16/9] overflow-hidden rounded-sm">
                                 <img class="w-full h-full object-cover" src="./media/anh_thu_vien.png" />
                             </div>
