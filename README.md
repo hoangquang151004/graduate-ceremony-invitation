@@ -1,79 +1,97 @@
 # 🎓 Academic Elegance - Trang Web Mời Tốt Nghiệp Cá Nhân
 
-Trang web mời tham dự lễ tốt nghiệp trực tuyến được thiết kế theo phong cách **"Commencement Couture"** (Nét đẹp học thuật sang trọng). Dự án kết hợp hài hòa giữa sự trang nghiêm của lễ tốt nghiệp và cảm giác tinh tế, ấm áp của một tấm thiệp mời vật lý cao cấp.
+Trang web mời tham dự lễ tốt nghiệp trực tuyến được thiết kế theo phong cách **"Commencement Couture"** (Nét đẹp học thuật sang trọng & Tactile Luxury). Dự án kết hợp hài hòa giữa sự trang nghiêm của buổi lễ tốt nghiệp và cảm giác tinh tế, ấm áp của một tấm thiệp mời vật lý cao cấp.
 
 Trang web được thiết kế riêng cho buổi lễ tốt nghiệp của **Nguyễn Thị Hương** vào ngày **18.07.2026** tại **Trường Đại học Công nghệ Đông Á**.
 
 ---
 
-## ✨ Tính Năng Nổi Bật
+## ✨ Tính Năng & Trải Nghiệm Nổi Bật
 
-- 🌸 **Thiết Kế Đậm Chất Nghệ Thuật (Tactile Luxury & Minimalist Editorial):** Sử dụng các khung ảnh Polaroid nghiêng tự nhiên, chất liệu giả lập giấy cotton thô (`paper-texture`), các họa tiết hoa peony màu nước mềm mại và hiệu ứng ép kim vàng nhạt.
-- 📸 **Scrapbook & Masonry Grid:** Bố cục trưng bày ảnh linh hoạt, hiển thị trọn vẹn những khoảnh khắc đời thường, ảnh chân dung học thuật và ảnh chụp cùng gia đình, bạn bè.
-- 🔍 **Bộ Sưu Tập Ảnh Lightbox Thông Minh:** Người xem có thể nhấp vào các "Snapshot ngày thường" để phóng to ảnh, chuyển slide bằng phím mũi tên hoặc nhấp chuột, xem mô tả chi tiết cho từng tấm ảnh.
-- 🎵 **Đĩa Nhạc Vinyl Tương Tác:** Trình phát nhạc nền (`music.mp3`) với nút bấm thiết kế giống như một đĩa than đang quay. Có cơ chế tự động phát thông minh (Autoplay Fallback) ngay khi người dùng tương tác lần đầu tiên với trang web để vượt qua chính sách chặn âm thanh của trình duyệt.
-- 🗺️ **Bản Đồ Chỉ Đường Thực Tế:** Tích hợp Google Maps Iframe chỉ đường trực tiếp tới địa điểm tổ chức (Đại học Công nghệ Đông Á - Trịnh Văn Bô, Hà Nội).
-- 🎬 **Hiệu Ứng Cuộn Trang Mượt Mà (Scroll Reveal):** Các thành phần giao diện sẽ trượt nhẹ và hiện dần lên khi cuộn trang nhờ công nghệ tối ưu `IntersectionObserver`.
-- 📱 **Tương Thích Mọi Thiết Bị (Responsive Design):** Giao diện hiển thị hoàn hảo trên máy tính (lưới 12 cột) cũng như điện thoại di động (lưới 1 cột với khoảng cách thoáng đãng).
+- 💌 **Hiệu Ứng Mở Phong Bì Thiệp Mời (Interactive Envelope Reveal):** Màn hình mở đầu trực quan mô phỏng một chiếc phong bì thiệp mời thực tế. Người xem nhấp vào dấu sáp đóng dấu (`Wax Seal`) để mở phong bì, kích hoạt âm nhạc và hiệu ứng trượt mở 3D sống động trước khi bước vào không gian trang chính.
+- 🌸 **Thiết Kế Đậm Chất Nghệ Thuật (Tactile Luxury & Minimalist Editorial):** Sự kết hợp giữa chất liệu giả lập giấy cotton thô (`paper-texture`), khung ảnh Polaroid đặt nghiêng tự nhiên, họa tiết hoa peony mềm mại và các chi tiết điểm xuyết ánh kim sang trọng.
+- ✨ **Hệ Thống Hạt Cánh Hoa & Đốm Sáng Lấp Lánh (Atmospheric Petals & Sparkles):** Hiệu ứng cánh hoa bay lãng mạn và ánh sao lấp lánh phát sáng tự nhiên, được tối ưu hoàn toàn bằng Vanilla JavaScript, mang lại cảm giác sống động và cuốn hút cho trang web.
+- 📸 **Scrapbook & Masonry Grid + Lightbox Thông Minh:** Bố cục trưng bày hình ảnh linh hoạt. Người xem có thể nhấp trực tiếp vào bất kỳ "Snapshot ngày thường" nào để mở **Lightbox**, xem chi tiết ảnh ở độ phân giải cao, đọc chú thích và chuyển tiếp dễ dàng bằng phím mũi tên hoặc chuột.
+- 💬 **Gửi Lời Chúc & Xác Nhận Tham Gia (RSVP & Wish Modals):** Tích hợp hai biểu mẫu tương tác với giao diện kính mờ (`backdrop-blur`) giúp khách mời dễ dàng gửi lời chúc mừng tốt đẹp hoặc xác nhận sự hiện diện (RSVP) chỉ với vài thao tác.
+- 📊 **Đồng Bộ Google Sheets & LocalStorage Theo Thời Gian Thực:** Kết nối sẵn sàng với **SheetDB API** để tự động lưu thông tin lời chúc và xác nhận tham gia trực tiếp lên Google Sheets. Đồng thời có cơ chế lưu trữ cục bộ (`localStorage`) dự phòng kèm thông báo Toast & Modal cảm ơn sang trọng.
+- 🎵 **Đĩa Nhạc Vinyl Tương Tác:** Trình phát nhạc nền (`music.mp3`) với nút xoay mô phỏng đĩa than cổ điển. Tích hợp cơ chế tự động phát thông minh (`Autoplay Fallback`) xử lý mượt mà việc trình duyệt chặn tự động phát âm thanh khi người dùng tương tác lần đầu với trang web.
+- 🗺️ **Bản Đồ & Thông Tin Địa Điểm Trực Quan:** Nhúng trực tiếp Google Maps Iframe đến địa điểm tổ chức (**Trường Đại học Công nghệ Đông Á - Trịnh Văn Bô, Hà Nội**) cùng các thông tin về ngày, giờ, hướng dẫn di chuyển tiện lợi.
+- 🎬 **Hiệu Ứng Cuộn Trang Mượt Mà (Scroll Reveal & Lazy Loading):** Tối ưu hóa tải ảnh và hiệu ứng hiện dần trơn tru nhờ sử dụng công nghệ `IntersectionObserver`.
+- 📱 **Responsive Hoàn Hảo Mọi Thiết Bị:** Hiển thị sắc nét, hài hòa từ màn hình máy tính rộng lớn đến điện thoại di động cầm tay.
 
 ---
 
 ## 🎨 Hệ Thống Thiết Kế (Design System)
 
-Chi tiết thiết kế được xây dựng dựa trên đặc tả trong [DESIGN.md](DESIGN.md):
+Chi tiết thiết kế được xây dựng và tuân thủ theo đặc tả trong [DESIGN.md](DESIGN.md):
 
 - **Màu Sắc Chủ Đạo:**
-  - `Primary` (Hồng phấn/Blush - `#7b5455`): Tạo nền tảng nữ tính, ấm áp.
-  - `Secondary` (Vàng Champagne/Gold - `#735c00`): Điểm xuyết cho các chi tiết đặc biệt như khung viền, nhãn, nút bấm.
-  - `Background` (Kem Giấy/Paper - `#fbf9f8`): Màu nền ấm mô phỏng bìa giấy mỹ thuật.
-  - `Neutral` (Than chì/Charcoal - `#1b1c1c`): Đảm bảo độ tương phản cao cho chữ viết.
+  - `Primary` (Hồng phấn/Blush - `#7b5455`): Tạo nên sự ấm áp, tinh tế và trang nhã.
+  - `Secondary` (Vàng Champagne/Gold - `#735c00`): Điểm xuyết cho các chi tiết đặc biệt như khung viền, nhãn nhấn, nút bấm.
+  - `Background` (Kem Giấy/Paper - `#fbf9f8`): Màu nền ấm áp mô phỏng bề mặt giấy mỹ thuật cao cấp.
+  - `Neutral` (Than chì/Charcoal - `#1b1c1c`): Đảm bảo độ tương phản cao và rõ nét cho văn bản.
 - **Phông Chữ (Typography):**
-  - **Tiêu đề:** `Playfair Display` (Font serif cổ điển, trang trọng).
-  - **Nội dung chính:** `Source Sans 3` (Font sans-serif hiện đại, dễ đọc).
-  - **Nhãn/Nút:** `Montserrat` (Chữ in hoa, khoảng cách ký tự rộng tạo nét sang trọng).
-- **Trang Trí:** Khung ảnh Polaroid đổ bóng nhẹ (`polaroid-frame`), nhãn dán giả băng keo Washi (`washi-tape`), hoa văn nghệ thuật (`material-symbols-outlined`).
+  - **Tiêu đề:** `Playfair Display` (Font serif cổ điển, trang trọng, mang đậm phong cách học thuật).
+  - **Nội dung chính:** `Source Sans 3` (Font sans-serif hiện đại, thanh thoát, dễ đọc).
+  - **Nhãn/Nút bấm:** `Montserrat` (Chữ in hoa với khoảng cách ký tự rộng, hiện đại và sang trọng).
 
 ---
 
 ## 📁 Cấu Trúc Dự Án
 
 ```text
-├── code.html          # Trang HTML chính chứa cấu trúc, kiểu dáng Tailwind & JS logic
+├── index.html         # Trang HTML chính chứa toàn bộ giao diện Tailwind CSS, hiệu ứng & logic JavaScript
 ├── DESIGN.md          # Đặc tả hệ thống thiết kế (Design System specification)
-├── music.mp3          # Nhạc nền định dạng MP3 cho trang web
-├── screen.png         # Ảnh chụp màn hình giao diện
-└── README.md          # Hướng dẫn dự án (File này)
+├── README.md          # Tài liệu hướng dẫn dự án (File này)
+├── music.mp3          # Nhạc nền định dạng MP3 cho thiệp mời
+├── screen.png         # Ảnh preview giao diện trang web
+└── media/             # Thư mục lưu trữ hình ảnh (ảnh chân dung, snapshot polaroid, ảnh sự kiện...)
 ```
 
 ---
 
 ## 🛠️ Công Nghệ Sử Dụng
 
-- **HTML5 & Vanilla Javascript (ES6+)**
-- **Tailwind CSS (CDN version)** cho việc xây dựng bố cục và responsive nhanh chóng
-- **Google Fonts** (`Playfair Display`, `Source Sans 3`, `Montserrat`)
-- **Material Symbols Outlined** cho hệ thống icon thanh lịch
-- **IntersectionObserver API** cho hiệu ứng cuộn trang hiệu năng cao
+- **HTML5 & Vanilla JavaScript (ES6+):** Xây dựng cấu trúc và logic tương tác mượt mà, không phụ thuộc vào framework nặng nề.
+- **Tailwind CSS (CDN version):** Kết hợp các plugin `forms`, `container-queries` và custom theme trực tiếp trong HTML để tạo giao diện nhanh chóng, linh hoạt.
+- **Google Fonts:** Tải động bộ phông chữ (`Playfair Display`, `Source Sans 3`, `Montserrat`).
+- **Material Symbols Outlined:** Hệ thống biểu tượng sắc nét, tinh tế từ Google.
+- **IntersectionObserver API & Web Audio API:** Quản lý hiệu ứng cuộn trang và âm thanh tối ưu hiệu năng.
+- **SheetDB REST API:** Cầu nối API trực tiếp để lưu trữ dữ liệu biểu mẫu lên Google Sheets.
 
 ---
 
-## 🚀 Hướng Dẫn Chạy Dự Án
+## 🚀 Hướng Dẫn Khởi Chạy & Cấu Hình
 
-Trang web được thiết kế dạng Single Page Application thuần nên không cần cấu hình build phức tạp. Bạn có thể khởi chạy bằng các cách sau:
+### 1. Khởi Chạy Trang Web
 
-### Cách 1: Mở Trực Tiếp (Đơn Giản)
-Nhấp đúp chuột vào file `code.html` để mở trực tiếp trên bất kỳ trình duyệt nào (Chrome, Safari, Edge, Firefox).
+Trang web được xây dựng dưới dạng Single Page Application gọn nhẹ. Bạn có thể khởi chạy theo các cách sau:
 
-> [!NOTE]  
-> Do chính sách bảo mật CORS của trình duyệt đối với tệp tin cục bộ (`file://`), tính năng nhúng Google Maps có thể hiển thị cảnh báo trên một số trình duyệt nếu chạy offline trực tiếp. Để trải nghiệm tốt nhất, bạn nên sử dụng **Cách 2**.
+- **Cách khuyên dùng (Với VS Code Live Server):**
+  1. Cài đặt tiện ích mở rộng **Live Server** trên Visual Studio Code.
+  2. Nhấp chuột phải vào file `index.html` và chọn **Open with Live Server**.
+  3. Trình duyệt sẽ mở trang web tại địa chỉ nội bộ (ví dụ: `http://127.0.0.1:5500/index.html`). Toàn bộ tính năng mở phong bì, phát âm thanh và bản đồ sẽ hoạt động trơn tru nhất.
+- **Mở trực tiếp:**
+  - Nhấp đúp chuột vào file `index.html` để mở bằng trình duyệt (Chrome, Safari, Edge, Firefox). *(Lưu ý: Một số chính sách bảo mật CORS của trình duyệt đối với tệp `file://` có thể hạn chế nhúng Google Maps hoặc Autoplay âm thanh).*
 
-### Cách 2: Sử Dụng Live Server (Khuyên Dùng)
-1. Nếu sử dụng VS Code, cài đặt extension **Live Server**.
-2. Nhấp chuột phải vào `code.html` và chọn **Open with Live Server**.
-3. Trang web sẽ chạy trên máy chủ nội bộ (ví dụ: `http://127.0.0.1:5500/code.html`). Âm nhạc và bản đồ sẽ hoạt động trơn tru.
+### 2. Cấu Hình Lưu Lời Chúc & RSVP Lên Google Sheets (SheetDB)
+
+Để thông tin khách mời gửi từ biểu mẫu **Gửi Lời Chúc** và **Xác Nhận Tham Gia** tự động được lưu vào bảng tính Google Sheets của bạn:
+
+1. Tạo một trang tính **Google Sheets** mới và đặt tên cho các cột ở hàng đầu tiên (Header row) gồm:
+   - `type` (Loại: wish / rsvp)
+   - `name` (Tên người gửi)
+   - `message` (Lời chúc)
+   - `timestamp` (Thời gian gửi)
+2. Truy cập [SheetDB.io](https://sheetdb.io/), đăng nhập và kết nối với file Google Sheets vừa tạo để lấy **API URL**.
+3. Mở file `index.html`, tìm đến dòng **1277** và dán URL API của bạn vào biến `SHEETDB_API_URL`:
+   ```javascript
+   const SHEETDB_API_URL = "https://sheetdb.io/api/v1/mã_api_của_bạn_tại_đây";
+   ```
+   *(Nếu để trống `""`, hệ thống sẽ mặc định lưu trữ cục bộ vào `localStorage` của trình duyệt).*
 
 ---
 
-## 📄 Bản Quyền & Giấy Phép
+## 📄 Bản Quyền & Lời Cảm Ơn
 
-Dự án này được tạo ra để lưu giữ kỷ niệm tốt nghiệp lớp 2026. Vui lòng tôn trọng quyền sở hữu hình ảnh của nhân vật chính trong trang web.
+Dự án được tạo ra với trọn vẹn sự chăm chút và tâm huyết nhằm lưu giữ những kỷ niệm quý giá trong buổi lễ tốt nghiệp của lớp 2026. Xin chân thành cảm ơn và chúc mừng tân cử nhân!
