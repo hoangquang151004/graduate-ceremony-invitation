@@ -155,6 +155,24 @@
             border-color: transparent transparent white transparent;
         }
 
+        .speech-bubble-pink {
+            background: #ffe4e6;
+            border-radius: 16px;
+            padding: 5px 14px;
+            box-shadow: 0 4px 12px rgba(244, 63, 94, 0.15);
+            position: relative;
+        }
+
+        .speech-bubble-pink::after {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 16px;
+            border-width: 0 6px 6px 6px;
+            border-style: solid;
+            border-color: transparent transparent #ffe4e6 transparent;
+        }
+
         @keyframes spin-slow {
             from {
                 transform: rotate(0deg);
@@ -274,7 +292,7 @@
         class="fixed inset-0 z-50 flex flex-col items-center justify-center p-6 bg-transparent transition-all duration-1000 ease-in-out">
         <header class="absolute top-0 w-full flex justify-center py-8">
             <h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-widest opacity-40">
-                COMMENCEMENT 2024</h1>
+                COMMENCEMENT 2026</h1>
         </header>
 
         <div class="envelope-container w-full max-w-[500px] aspect-[4/3] relative cursor-pointer group"
@@ -285,19 +303,17 @@
             </div>
 
             <!-- Envelope Back Body -->
-            <div
-                class="absolute inset-0 bg-white gold-edge rounded-lg z-10 flex items-center justify-center">
+            <div class="absolute inset-0 bg-white gold-edge rounded-lg z-10 flex items-center justify-center">
                 <!-- Inner Content (The Polaroid Preview) -->
                 <div class="w-[85%] h-[85%] bg-white p-4 shadow-xl translate-y-4 opacity-0 transition-all duration-700 ease-out"
                     id="invitation-card">
                     <div class="w-full h-[75%] bg-surface-variant overflow-hidden">
-                        <img class="w-full h-full object-cover" alt="Graduation Polaroid"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYPmze8oPWj0oqiPldi3vyMJsICOo1OtDISgmOYDxQeKMyKLsEi0wwo_0g3HcHBrV8yCbzQtTxi6oFqoHefZjlEnojHj884oMYR7XDMXtwP3RVu62g2RFecgzEgYChfpX598PcrWEeb7g7hAZu3XNhKtJxbNo3iqjd0snIfe-7c_-xonAhBBaKLI9Z4CF_X6TVsoCS7fqmQhsgmwPehwoL7Y0dm9AsGiHI_wKOsSode95d7aPlWCRs" />
+                        <img class="w-full h-full object-cover" alt="Graduation Polaroid" src="./media/anhchinh.png" />
                     </div>
                     <div class="mt-4 text-center">
                         <p class="font-italic-accent text-italic-accent text-primary">Save the Date</p>
                         <p class="font-label-caps text-[10px] text-outline mt-1 uppercase tracking-[0.2em]">June 15,
-                            2024</p>
+                            2026</p>
                     </div>
                 </div>
             </div>
@@ -379,13 +395,16 @@
                     <!-- Main Polaroid -->
                     <div class="bg-white p-6 pb-16 rounded-sm shadow-2xl relative z-10 border border-outline-variant/10 reveal-on-scroll"
                         data-delay="0">
-                        <div class="aspect-[4/5] rounded-sm overflow-hidden relative group">
-                            <img alt="Nguyễn Thị Hương Graduation"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwKSmKXd-1eHaHosrVBCFAzIgU5wM0I5rk6E_tP3z5cpvD06MNAoVPrTcrQmEo0uGIa9e_lB8DxBdLMy7LkDgM_K27IbxTcczRnwhb3zDmgbknfL-rxpghPIUfhYXVx48PWhrJbO_vHRXEyypNyWi1iS7PwVgXlda1Jt2L6kzUcnALmz4BchLQsbkgNBvXMiQ4Pq_bmrTyu_OFV7Fe2MlISxn9IZVuDV6MAsvwYDpjV8QUBPfLOd5qgRxmEiObPoXOww" />
+                        <div class="aspect-[4/5] rounded-sm relative group z-20">
+                            <div class="absolute inset-0 overflow-hidden rounded-sm">
+                                <img alt="Nguyễn Thị Hương Graduation"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    src="./media/anhchinh.png" />
+                            </div>
                             <!-- Speech Bubble Tag -->
-                            <div class="absolute bottom-6 right-6 speech-bubble-top-left">
-                                <span class="font-headline-sm text-primary text-lg">Nguyễn Thị Hương</span>
+                            <div class="absolute bottom-6 right-1 z-40 speech-bubble-pink translate-x-[40px]">
+                                <span class="font-headline-sm text-primary text-sm font-semibold">Nguyễn Thị
+                                    Hương</span>
                             </div>
                         </div>
                         <!-- Decorative Elements -->
@@ -418,7 +437,7 @@
                             data-delay="0">
                             <div class="aspect-[4/5] md:aspect-auto md:h-full overflow-hidden rounded-sm">
                                 <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc1DbsUeGQBQtvi0jxrbK2uL-_kfFJ8-g7WCaxMy-CWuLbY20gb9aX2IcBKR2gfp3XDn1nZjO76HtVY5QZ-VHbVepj8a_Xq8ibEib_byVSbWyBq1YXC1VxljhsTPh2zNX_u88QSVTR7iimDf4DBkD2ZmU8MnocUepb_seWn4080TSxyIq3d47WaI88ecB4LO3Y-hsTLmrAlNQTNA-TDLg21baqNJX1TuXX7PKDACR4bCrZKoMgrrPf" />
+                                    src="./media/anh4.jpg" />
                             </div>
                             <div class="mt-4 flex items-center gap-2">
                                 <div class="washi-tape text-[10px] font-label-caps text-primary">KHOẢNH KHẮC</div>
@@ -429,8 +448,7 @@
                         <div class="polaroid-frame transition-transform hover:rotate-2 duration-300 reveal-on-scroll"
                             data-delay="180">
                             <div class="aspect-[3/4] overflow-hidden rounded-sm">
-                                <img class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu92zqMFecDjUKfVy4KCvSBrI-i9Vxml2O9VFWoSRfuE2zNdB5oRASIlsZS9vTVwJoTDONN41oXt9U7oV6VZAysajCNqYH21iLiJCTIvoQEvKHucxmEehZuIYYn9-cCZgt9f9gxnfDmWseeaXPGsXMKuQR2NT7f57187SHRI_elcXwKX67oMEy5uLwT9fRs9bNOYy7D-K2VzUDeW0fUkznHAAooOUNWKBSTr8nfn1dnq3YeBTSHpO7" />
+                                <img class="w-full h-full object-cover" src="./media/goctrencao.jpg" />
                             </div>
                         </div>
                     </div>
@@ -438,8 +456,7 @@
                         <div class="polaroid-frame transition-transform hover:-rotate-2 duration-300 reveal-on-scroll"
                             data-delay="350">
                             <div class="aspect-[3/4] overflow-hidden rounded-sm">
-                                <img class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb4Pf5_z-Lfc67t__BYGqPsm_tKz3UR5fB67IHgQ2qWilGLnyTI83ctTToJyE66yl6d0vMDOMR1Tm9jxjDrV6ls96zjl82Ae8tQFKLwcyzor0YEpv9wjlvCxecphzGk_YNl01NmBZsGTWWON9g9FIdPJgRiCODaulFUZb-FWDNruymBPXnn45oJfN5ru0kzSNKv9DNm45tq1xre03jWy6JHH4OHSgJk9F_wXADee8Ay3uwfBOMH2_H" />
+                                <img class="w-full h-full object-cover" src="./media/anh1.jpg" />
                             </div>
                         </div>
                     </div>
@@ -447,282 +464,13 @@
                         <div class="polaroid-frame transition-transform hover:rotate-1 duration-300 reveal-on-scroll"
                             data-delay="500">
                             <div class="aspect-[16/9] overflow-hidden rounded-sm">
-                                <img class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcfPGgOs8rTuEDEG6hZ_0_cLJAt1qG8kkDsdxA03oLSKJvne8gN_jUv_p9Pnk5B2FvF5OyTYDuHsXjXs0HiCyLJF8eiB2UNQ9T04Z1CKSZOX4hzi5K89fIpC_Qp1qN1e_ptOLVNJ2Nme3cRTeDa300dkGpKxpKhwmnyS0j36xxqDIJJXEghpJ40m-54yLnPQ-K7vEGi6-EguFSIAFvSZ4UIrxCr1wqUadVu6Xn51lapVeKU5yJbqwm" />
+                                <img class="w-full h-full object-cover" src="./media/anh_thu_vien.png" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- 2. Horizontal Scrolling Carousel (Daily Life) -->
-            <section class="mb-section-gap">
-                <div class="flex justify-between items-end mb-10">
-                    <div class="relative">
-                        <span
-                            class="material-symbols-outlined absolute -left-8 -top-4 text-primary-container/40 animate-spin-slow">auto_awesome</span>
-                        <h3 class="font-headline-md text-primary">Snapshot Ngày Thường</h3>
-                        <p class="text-secondary font-italic-accent text-base">Những góc nhỏ thân thuộc</p>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <!-- Image 1 -->
-                    <div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative"
-                        data-index="0" data-delay="0">
-                        <div class="aspect-square overflow-hidden rounded-sm relative">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G" />
-                            <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                                <span
-                                    class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Image 2 -->
-                    <div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative"
-                        data-index="1" data-delay="150">
-                        <div class="aspect-square overflow-hidden rounded-sm relative">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKvL_jdcu59AAKcezc4Wg2zF0llDrgiZzgK7iiqyYJHz87nFcTBCporgKDTqBY7J6ZUen76Jl84TKY1vn5v_EdEJHGnsar78a8O65zYaKz1oXHCffoFmFIPU5k7bZh3ChFUFkiZOKqQWmEFb28WWSNGnq3Xc4-G1jhKgY1KmrNW_XV4hg4_5KFne_M6kDHA0ikx9O03F6SlV5hzm3-2cz6XnZKC5dLBPNe5JmZiNB4qSQF9R6so70Y" />
-                            <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                                <span
-                                    class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Image 3 -->
-                    <div class="polaroid-frame reveal-on-scroll snapshot-card cursor-pointer group relative"
-                        data-index="2" data-delay="300">
-                        <div class="aspect-square overflow-hidden rounded-sm relative">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmnc4KKgg_48iHFO0l8QZrSVl8PaKjtDl_41rr6SisXvIPRrHqVDrRekKjIMfzh8nCk3ucFde6Z3gfjtX5ngZc0J6BK__7jk1exKJHJEU_WlCcDKtd-6RNo8u3POukC44lirHf_VKZuFgaZjalSsDuhUNhXE2ogLDYNB6xyGXjntL4U5tXnamh3W0CmyWyHOS0FrST6RbT0unla4bh4pHaetKSjkIEb4pSetQRCvdUfjaN-mjGQ9Sr" />
-                            <div
-                                class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                                <span
-                                    class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition-all duration-300">zoom_in</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Image 4 with Overlay -->
-                    <div class="polaroid-frame relative group cursor-pointer reveal-on-scroll snapshot-card"
-                        data-index="3" data-delay="450">
-                        <div class="aspect-square overflow-hidden rounded-sm relative">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPfDaiwEDldhRjUkrBARTHwTZujgwAbkLwn7FXlNgM_zO7Gw5pJZZKj79jDWGTyCKOU_s6pvL3MfD997IA-8V-kuAPzGl_RcpTldcurtkhIvVKhMKm8MkMgjF--myIFZJVXNQjdV693G4_PV5JyBFiUIjxWI_pT7rvaZ8yomStlWzc8SB2-fK8bafqoMAnYOOEbZ2e-0A4hZH4oARLq5jAmyQGhGPu8824svHNf12phRZZ7CVjIe7" />
-                            <div
-                                class="absolute inset-0 bg-black/55 flex flex-col items-center justify-center transition-colors group-hover:bg-black/65">
-                                <span class="text-white font-headline-md text-3xl">+12</span>
-                                <span class="text-white/90 text-xs font-label-caps mt-1 flex items-center gap-1"><span
-                                        class="material-symbols-outlined text-sm">photo_library</span> Xem Trọn
-                                    Album</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- 3. Structured 2-Column Grid (Professional Portraits) -->
-            <section class="mb-section-gap relative overflow-x-clip">
-                <div class="absolute -right-20 top-1/2 -translate-y-1/2 text-primary-container/10 -z-10 rotate-45">
-                    <span class="material-symbols-outlined text-[200px]">auto_awesome</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <div class="order-2 md:order-1">
-                        <div class="polaroid-frame max-w-sm mx-auto transform -rotate-2 shadow-2xl relative reveal-on-scroll reveal-left"
-                            data-delay="100">
-                            <!-- Decor Flower -->
-                            <div class="absolute -top-6 -right-6 text-secondary-fixed-dim/60">
-                                <span class="material-symbols-outlined text-5xl">filter_vintage</span>
-                            </div>
-                            <div class="aspect-[4/5] overflow-hidden rounded-sm">
-                                <img class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA586fSMba61w_T1lG3QDz9XqbzU_T6ZZRSid8a0vyYVNq-E7s7D2t28CdjRCNP8bU8JLWfl1KjpOSJ4n4UhVvMcbaGPI01BkM55_hEfbZ0EY7poZ7y06e-aB2ylxsdO4kDmH5S_vV576WxjeMRFCLNkz5N4sAuzzO8gefghNeZiaQkGEh3_-1XpY2ZVEfCY81vUzeulHoUxClQASDsaUDN7RK47sltLsfBQAaa4zcCI66bwKahPWtz" />
-                            </div>
-                            <div class="mt-6 flex justify-center">
-                                <div class="washi-tape font-label-caps text-[11px] text-primary">CUM LAUDE 2024</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-1 md:order-2 space-y-8 reveal-on-scroll reveal-right" data-delay="250">
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-3">
-                                <div class="h-[1px] w-8 bg-secondary-fixed-dim"></div>
-                                <span class="font-label-caps text-[11px] text-secondary tracking-widest uppercase">Chân
-                                    Dung Thành Tựu</span>
-                            </div>
-                            <h4 class="font-headline-md text-primary text-4xl leading-tight">Vẻ Đẹp của<br />Tri Thức
-                            </h4>
-                        </div>
-                        <p class="font-body-lg text-on-surface-variant leading-relaxed max-w-md">
-                            Từng bước đi trong suốt 4 năm qua không chỉ là những bài giảng trên giảng đường, mà còn là
-                            hành trình khám phá bản thân và trưởng thành trong suy nghĩ.
-                        </p>
-                        <div class="pt-8 border-t border-outline-variant/30 relative">
-                            <span
-                                class="material-symbols-outlined absolute -top-4 left-0 text-primary-container/40">format_quote</span>
-                            <p class="font-italic-accent text-primary text-xl pl-6">"Học vấn là chìa khóa mở cánh cửa
-                                tương lai."</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- 4. Family & Friends Scrapbook Album (1 Ảnh To & Nhiều Ảnh Nhỏ Xung Quanh) -->
-            <section class="mb-12 relative overflow-x-clip">
-                <!-- Heading close to photos -->
-                <div class="text-center mb-6 relative">
-                    <h3 class="font-headline-md text-primary text-3xl md:text-4xl">Người Bạn Đồng Hành</h3>
-                    <p class="text-secondary font-italic-accent mt-1">Phía sau mỗi thành công là sự yêu thương &amp; sẻ
-                        chia</p>
-                    <div
-                        class="absolute -top-8 left-1/2 -translate-x-1/2 text-primary-container/15 pointer-events-none">
-                        <span class="material-symbols-outlined text-[70px]">favorite</span>
-                    </div>
-                </div>
-                <!-- Layout: 1 Ảnh To Chính Giữa & Nhiều Ảnh Nhỏ Xung Quanh -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-center max-w-6xl mx-auto px-2">
-                    <!-- Left Column (2 Small Photos) -->
-                    <div class="flex flex-col gap-6">
-                        <!-- Small Photo 1 (Slide from left) -->
-                        <div class="polaroid-frame transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-left"
-                            data-delay="100">
-                            <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVEy9npL0lhZfVMzv13BkfnTGDnLb24D-uxDDhwvB4PvAepGXN3lf5hYt9-znoL5bXhbXkzIgRntM3puVdy0UoOQ4a207Jo2nmgMFAzVLXYUjfDWBdVAQdIoYi0SbejtpHMDxoVmjsCtE1bbBV4wGotSi-O4ZhU2NjPPtIIiYyIjRwOzi63zH5n1oVebD2IjoEoeeENHLSnz_kP4jk5hz4dZU-1KkcdhyaQxSM2oo0oqWXjtwGhjKb" />
-                            </div>
-                            <div class="mt-2 flex justify-between items-center text-xs">
-                                <span class="font-italic-accent text-primary">Khoảnh Khắc Đáng Nhớ</span>
-                                <span class="material-symbols-outlined text-xs text-secondary-fixed-dim">sparkles</span>
-                            </div>
-                        </div>
-                        <!-- Small Photo 2 (Slide from left delay 300ms) -->
-                        <div class="polaroid-frame transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-left"
-                            data-delay="300">
-                            <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrlF-AohaaSfFS6HdyL10VFv9E2rQLNv7VIZ4E35RalFxjStmMPm85w84I1Td7lUkC590OUtZkg744ec7mra4wZIddNiLkj25cANG-fNjkJUaeb3erAqmM0k9XtdGnuQzUSAqDkOKG1XXYwr3kmU1ZzAZxWL1H18013eRgz8Zww8cs2uMi-NQp8swH1zDHCttwhD63tfbQ-ttREQ1oafQZkQlcO8Ib7GNvSiZsVS8FQt2rXlHRE4lO" />
-                            </div>
-                            <div class="mt-2 flex justify-between items-center text-xs">
-                                <span class="font-italic-accent text-primary">Thanh Xuân Bên Nhau 🌸</span>
-                                <span class="washi-tape font-label-caps text-[8px] text-primary">FRIENDS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Center Column: 1 BIG HERO PHOTO + 2 Small Photos Below -->
-                    <div class="sm:col-span-2 flex flex-col gap-6">
-                        <!-- 1 BIG CENTER HERO PHOTO (Slide up from bottom) -->
-                        <div class="polaroid-frame transform hover:scale-[1.02] transition-all duration-500 shadow-2xl border-2 border-primary/20 group reveal-on-scroll"
-                            data-delay="0">
-                            <div class="aspect-[16/11] overflow-hidden rounded-sm relative">
-                                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmWxzvfZuM7c_QvZuyrHCBxg3uA1TLMjosWIHTdHO3C8jWOVjBIf0Yw9dECL-RztSOs4OV_8F6VGmcvqrK8JH7ZFAgLD-WVu0nM_HQa_w9JoT-rkwslZWBXH7U7rJjhto4CbpnS-n_KaB2HRqRoAcijIepemF6puVzvQ_z9NyBBhJTpzR0cHI9oRS514W_BeMBp2ikAh_DTu1xsblLBR2NLdaMsIIrM8DE5jtV-G42wHRGZKd3mGI_" />
-                                <div class="absolute bottom-4 right-4 speech-bubble-tag">
-                                    <span class="font-headline-sm text-primary text-base">Gia Đình Là Điểm Tựa ❤️</span>
-                                </div>
-                            </div>
-                            <div class="mt-3 flex justify-between items-center">
-                                <span class="font-italic-accent text-base text-primary font-bold">With Family &amp;
-                                    Loved Ones</span>
-                                <div class="washi-tape font-label-caps text-[10px] text-primary">SPOTLIGHT 2024</div>
-                            </div>
-                        </div>
-                        <!-- 2 Small Photos Directly Below Big Photo -->
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="polaroid-frame transform -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll"
-                                data-delay="200">
-                                <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-                                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu92zqMFecDjUKfVy4KCvSBrI-i9Vxml2O9VFWoSRfuE2zNdB5oRASIlsZS9vTVwJoTDONN41oXt9U7oV6VZAysajCNqYH21iLiJCTIvoQEvKHucxmEehZuIYYn9-cCZgt9f9gxnfDmWseeaXPGsXMKuQR2NT7f57187SHRI_elcXwKX67oMEy5uLwT9fRs9bNOYy7D-K2VzUDeW0fUkznHAAooOUNWKBSTr8nfn1dnq3YeBTSHpO7" />
-                                </div>
-                                <div class="mt-2 text-center text-xs font-italic-accent text-primary">Nụ Cười Rạng Rỡ
-                                </div>
-                            </div>
-                            <div class="polaroid-frame transform rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll"
-                                data-delay="350">
-                                <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-                                    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G" />
-                                </div>
-                                <div class="mt-2 text-center text-xs font-italic-accent text-primary">Kỷ Niệm Sân Trường
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Right Column (2 Small Photos) -->
-                    <div class="flex flex-col gap-6">
-                        <!-- Small Photo 5 (Slide from right delay 200ms) -->
-                        <div class="polaroid-frame transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-right"
-                            data-delay="200">
-                            <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPfDaiwEDldhRjUkrBARTHwTZujgwAbkLwn7FXlNgM_zO7Gw5pJZZKj79jDWGTyCKOU_s6pvL3MfD997IA-8V-kuAPzGl_RcpTldcurtkhIvVKhMKm8MkMgjF--myIFZJVXNQjdV693G4_PV5JyBFiUIjxWI_pT7rvaZ8yomStlWzc8SB2-fK8bafqoMAnYOOEbZ2e-0A4hZH4oARLq5jAmyQGhGPu8824svHNf12phRZZ7CVjIe7" />
-                            </div>
-                            <div class="mt-2 flex justify-between items-center text-xs">
-                                <span class="font-italic-accent text-primary">Ngày Vui Trọn Vẹn ✨</span>
-                                <span class="material-symbols-outlined text-xs text-secondary-fixed-dim">favorite</span>
-                            </div>
-                        </div>
-                        <!-- Small Photo 6 (Slide from right delay 450ms) -->
-                        <div class="polaroid-frame transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-300 shadow-md group reveal-on-scroll reveal-right"
-                            data-delay="450">
-                            <div class="aspect-[4/3] overflow-hidden rounded-sm relative">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc1DbsUeGQBQtvi0jxrbK2uL-_kfFJ8-g7WCaxMy-CWuLbY20gb9aX2IcBKR2gfp3XDn1nZjO76HtVY5QZ-VHbVepj8a_Xq8ibEib_byVSbWyBq1YXC1VxljhsTPh2zNX_u88QSVTR7iimDf4DBkD2ZmU8MnocUepb_seWn4080TSxyIq3d47WaI88ecB4LO3Y-hsTLmrAlNQTNA-TDLg21baqNJX1TuXX7PKDACR4bCrZKoMgrrPf" />
-                            </div>
-                            <div class="mt-2 flex justify-between items-center text-xs">
-                                <span class="font-italic-accent text-primary">Khoảnh Khắc Tốt Nghiệp</span>
-                                <span class="washi-tape font-label-caps text-[8px] text-primary">2024</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Event Details Section (Time & Date / Real Interactive Map) at Bottom -->
-            <section class="mt-10 mb-2 max-w-4xl mx-auto px-4 reveal-on-scroll">
-                <div class="bg-white/85 backdrop-blur-md rounded-3xl border border-white shadow-2xl overflow-hidden">
-                    <!-- Top Details Banner -->
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-3 items-center gap-6 p-8 border-b border-outline-variant/20">
-                        <!-- Time & Date -->
-                        <div class="text-center md:text-left flex flex-col items-center md:items-start">
-                            <span
-                                class="inline-flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant mb-1 tracking-widest">
-                                <span class="material-symbols-outlined text-sm text-primary">calendar_month</span> TIME
-                                &amp; DATE
-                            </span>
-                            <p class="font-headline-sm text-primary text-2xl font-bold">18.05.2024</p>
-                            <p class="font-body-md text-secondary mt-1">09:30 — 12:00</p>
-                        </div>
-                        <!-- Center Decorative Badge -->
-                        <div class="flex flex-col items-center justify-center text-primary-container/70 my-2 md:my-0">
-                            <span class="material-symbols-outlined text-5xl animate-pulse">local_florist</span>
-                            <span class="font-italic-accent text-xs text-primary mt-1">Lễ Tốt Nghiệp</span>
-                        </div>
-                        <!-- Location Info -->
-                        <div class="text-center md:text-right flex flex-col items-center md:items-end">
-                            <span
-                                class="inline-flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant mb-1 tracking-widest">
-                                <span class="material-symbols-outlined text-sm text-primary">location_on</span> LOCATION
-                            </span>
-                            <p class="font-body-md font-semibold text-primary text-lg">Đại học Công nghệ Đông Á</p>
-                            <p class="font-body-md text-on-surface-variant text-sm mt-0.5">Trịnh Văn Bô, Xuân Phương, Hà
-                                Nội</p>
-                            <a href="https://maps.google.com/?q=Đại+học+Công+nghệ+Đông+Á+Hà+Nội" target="_blank"
-                                rel="noopener noreferrer"
-                                class="mt-3 inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary text-white rounded-full text-xs font-medium hover:bg-primary/90 transition-all shadow-sm">
-                                <span class="material-symbols-outlined text-sm">directions</span> Chỉ đường Google Maps
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Interactive Real Google Map Embed -->
-                    <div class="relative w-full h-[360px] md:h-[420px] bg-surface-variant/30">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863855881404!2d105.74459841533214!3d21.03813279283542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgxJDDtG5nIMOB!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full object-cover">
-                        </iframe>
-                    </div>
-                </div>
-            </section>
+
             <!-- Thank You Letter Section (Lời Cảm Ơn) -->
             <section class="mt-8 mb-12 max-w-3xl mx-auto px-4 reveal-on-scroll">
                 <div
@@ -770,12 +518,120 @@
                                 này!"
                             </p>
                         </div>
+                        <!-- Action Buttons: Gửi lời chúc & Tham gia -->
+                        <div class="mt-8 mb-4 flex flex-wrap items-center justify-center gap-4 w-full max-w-md mx-auto">
+                            <!-- Button 1: Gửi lời chúc -->
+                            <button type="button" onclick="openWishModal()"
+                                class="flex-1 min-w-[160px] inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-full font-headline-sm text-sm font-semibold hover:from-rose-600 hover:to-pink-600 hover:shadow-lg hover:scale-[1.03] active:scale-95 transition-all shadow-md group cursor-pointer">
+                                <span
+                                    class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">favorite</span>
+                                <span>Gửi Lời Chúc</span>
+                            </button>
+                            <!-- Button 2: Tham gia -->
+                            <button type="button" onclick="openRsvpModal()"
+                                class="flex-1 min-w-[160px] inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-white rounded-full font-headline-sm text-sm font-semibold hover:bg-primary/90 hover:shadow-lg hover:scale-[1.03] active:scale-95 transition-all shadow-md group cursor-pointer">
+                                <span
+                                    class="material-symbols-outlined text-lg group-hover:scale-110 transition-transform">celebration</span>
+                                <span>Tham Gia</span>
+                            </button>
+                        </div>
                         <!-- Signature -->
                         <div class="mt-10 flex flex-col items-center">
                             <p class="font-label-caps text-[10px] text-on-surface-variant tracking-widest mb-1">WITH ALL
                                 MY LOVE,</p>
                             <p class="font-headline-sm text-primary text-2xl font-bold">Nguyễn Thị Hương</p>
-                            <div class="washi-tape font-label-caps text-[9px] text-primary mt-3">CLASS OF 2024</div>
+                            <div class="washi-tape font-label-caps text-[9px] text-primary mt-3">CLASS OF 2026</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Event Details Section (Time & Date / Real Interactive Map) at Bottom -->
+            <section class="mt-10 mb-2 max-w-4xl mx-auto px-4 reveal-on-scroll">
+                <div class="bg-white/85 backdrop-blur-md rounded-3xl border border-white shadow-2xl overflow-hidden">
+                    <!-- Compact Top Details Bar (Ngắn gọn) -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-6 bg-white/95 border-b border-outline-variant/15 text-sm">
+                        <!-- Time & Date -->
+                        <div class="flex items-center gap-3.5 w-full sm:w-auto">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                                <span class="material-symbols-outlined text-xl">calendar_month</span>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-headline-sm text-primary font-bold text-base">07/08/2026</span>
+                                    <span class="text-on-surface-variant/40">•</span>
+                                    <span class="font-body-md text-secondary font-medium text-xs sm:text-sm">Chiều
+                                        (13:00 - 17:00)</span>
+                                </div>
+                                <span
+                                    class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase block">Lễ
+                                    Tốt Nghiệp</span>
+                            </div>
+                        </div>
+
+                        <!-- Location Info & Direction Button -->
+                        <div
+                            class="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto border-t sm:border-t-0 pt-3 sm:pt-0 border-outline-variant/10">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0 shadow-inner">
+                                    <span class="material-symbols-outlined text-xl">location_on</span>
+                                </div>
+                                <div class="text-left">
+                                    <p class="font-body-md font-semibold text-primary text-sm leading-tight">Đại học
+                                        Công nghệ Đông Á</p>
+                                    <p class="font-body-md text-on-surface-variant text-xs mt-0.5">Phan Tây Nhạc, Xuân
+                                        Phương, Hà Nội</p>
+                                </div>
+                            </div>
+                            <a href="https://maps.google.com/?q=Đại+học+Công+nghệ+Đông+Á+Hà+Nội" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary text-white rounded-full text-xs font-medium hover:bg-primary/90 transition-all shadow-sm shrink-0">
+                                <span class="material-symbols-outlined text-sm">directions</span> Chỉ đường
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Real Google Map Embed (Chiếm chủ yếu) -->
+                    <div class="relative w-full h-[360px] md:h-[440px] bg-surface-variant/30 overflow-hidden group">
+                        <!-- Top Soft Gradient Blend -->
+                        <div
+                            class="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white/70 to-transparent pointer-events-none z-10">
+                        </div>
+
+                        <!-- Floating Interactive Hint Tag -->
+                        <div
+                            class="absolute top-3 left-3 z-10 bg-black/65 backdrop-blur-md px-3 py-1.5 rounded-full text-white text-[11px] font-medium flex items-center gap-1.5 shadow-sm pointer-events-none opacity-85 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-x-0.5">
+                            <span
+                                class="material-symbols-outlined text-xs text-amber-300 animate-pulse">touch_app</span>
+                            <span>Tương tác để xoay &amp; zoom bản đồ</span>
+                        </div>
+
+                        <!-- Google Map iFrame -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863855881404!2d105.74459841533214!3d21.03813279283542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgxJDDtG5nIMOB!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.01]">
+                        </iframe>
+
+                        <!-- Floating Live Status Badge -->
+                        <div
+                            class="absolute bottom-3 right-3 z-10 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-md border border-white flex items-center gap-2 pointer-events-none transition-transform duration-300 group-hover:scale-105">
+                            <div class="relative flex items-center justify-center w-2 h-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                            </div>
+                            <span
+                                class="font-label-caps text-[10px] text-primary font-bold tracking-wider uppercase">Khu
+                                Vực Tổ Chức</span>
+                        </div>
+
+                        <!-- Bottom Soft Gradient Blend -->
+                        <div
+                            class="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white/60 to-transparent pointer-events-none z-10">
                         </div>
                     </div>
                 </div>
@@ -794,7 +650,7 @@
                 <div class="w-16 h-[1px] bg-primary/20"></div>
                 <p class="font-italic-accent text-tertiary italic text-lg max-w-md">"Kết thúc một chương sách để bắt đầu
                     một hành trình rực rỡ hơn."</p>
-                <p class="font-label-caps text-[10px] text-on-surface-variant tracking-[0.3em] mt-8">© 2024 CLASS OF
+                <p class="font-label-caps text-[10px] text-on-surface-variant tracking-[0.3em] mt-8">© 2026 CLASS OF
                     EXCELLENCE</p>
                 <div class="flex gap-12 mt-4">
                     <a class="font-label-caps text-[10px] text-primary hover:text-secondary transition-colors tracking-widest"
@@ -840,7 +696,7 @@
         id="music-player-container">
         <!-- Audio Element -->
         <audio id="bg-music" loop="" preload="auto">
-            <source src="music.mp3" type="audio/mpeg" />
+            <!-- <source src="music.mp3" type="audio/mpeg" /> -->
         </audio>
         <!-- Interactive Vinyl Button -->
         <button aria-label="Bật/Tắt Nhạc"
@@ -979,7 +835,7 @@
             const snapshotGallery = [
                 {
                     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDhhaJRwNtIPC9N9T69Gbx9Lvz-3Sdym4ob7bvdFu11roKh-5mzKepSrjQWaiSMWg-g8nACIg4tsrDfblxDBKq5png8ogM9L2GOpPe3TgCoEtAIDFpO3-_KakqVJtgmfUFiQlYgxFF8_x9gG2Exmi57AIVzx1laX1MUCRcb07evklvEU4sbp9KrQ0MnbBL3dRxNRgyZeIPSwFnmFRL27fMZY2qv2rNj5wTOiopyn3Mlc_Sk5MJz-S-G",
-                    caption: "Góc nhỏ sân trường thân quen — 2024"
+                    caption: "Góc nhỏ sân trường thân quen — 2026"
                 },
                 {
                     src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDKvL_jdcu59AAKcezc4Wg2zF0llDrgiZzgK7iiqyYJHz87nFcTBCporgKDTqBY7J6ZUen76Jl84TKY1vn5v_EdEJHGnsar78a8O65zYaKz1oXHCffoFmFIPU5k7bZh3ChFUFkiZOKqQWmEFb28WWSNGnq3Xc4-G1jhKgY1KmrNW_XV4hg4_5KFne_M6kDHA0ikx9O03F6SlV5hzm3-2cz6XnZKC5dLBPNe5JmZiNB4qSQF9R6so70Y",
@@ -1221,6 +1077,262 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Gửi Lời Chúc -->
+    <div id="wish-modal"
+        class="fixed inset-0 z-[120] bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4">
+        <div
+            class="bg-white/95 backdrop-blur-md rounded-3xl p-6 md:p-8 max-w-md w-full shadow-2xl border border-white transform scale-95 transition-all duration-300 relative">
+            <button onclick="closeWishModal()"
+                class="absolute top-5 right-5 text-on-surface-variant hover:text-primary p-1.5 rounded-full hover:bg-surface-variant/50 transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <div class="flex items-center gap-3 mb-4 text-rose-500">
+                <span class="material-symbols-outlined text-3xl animate-pulse">favorite</span>
+                <h3 class="font-headline-md text-primary text-xl md:text-2xl font-bold">Gửi Lời Chúc Tốt Đẹp</h3>
+            </div>
+            <p class="font-body-md text-on-surface-variant text-sm mb-6">Hãy gửi những lời chúc ý nghĩa tới Hương trong
+                ngày trọng đại này nhé!</p>
+
+            <form id="wish-form" onsubmit="submitWish(event)" class="space-y-4 text-left">
+                <div>
+                    <label
+                        class="block font-label-caps text-xs text-primary font-semibold tracking-wider uppercase mb-1.5">Tên
+                        của bạn *</label>
+                    <input type="text" id="wish-name" required placeholder="Nhập tên của bạn..."
+                        class="w-full px-4 py-2.5 rounded-xl border border-outline-variant/40 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all font-body-md text-sm bg-white" />
+                </div>
+                <div>
+                    <label
+                        class="block font-label-caps text-xs text-primary font-semibold tracking-wider uppercase mb-1.5">Lời
+                        chúc *</label>
+                    <textarea id="wish-message" required rows="4" placeholder="Nhập lời chúc tốt đẹp gửi đến Hương..."
+                        class="w-full px-4 py-2.5 rounded-xl border border-outline-variant/40 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all font-body-md text-sm bg-white resize-none"></textarea>
+                </div>
+                <div class="pt-2 flex gap-3">
+                    <button type="button" onclick="closeWishModal()"
+                        class="flex-1 py-2.5 px-4 rounded-full border border-outline-variant/50 text-on-surface-variant font-medium text-sm hover:bg-surface-variant/30 transition-all">Hủy</button>
+                    <button type="submit"
+                        class="flex-1 py-2.5 px-4 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold text-sm hover:from-rose-600 hover:to-pink-600 shadow-md transition-all inline-flex items-center justify-center gap-1.5">
+                        <span class="material-symbols-outlined text-base">send</span> Gửi Lời Chúc
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Xác Nhận Tham Gia -->
+    <div id="rsvp-modal"
+        class="fixed inset-0 z-[120] bg-black/60 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4">
+        <div
+            class="bg-white/95 backdrop-blur-md rounded-3xl p-6 md:p-8 max-w-md w-full shadow-2xl border border-white transform scale-95 transition-all duration-300 relative">
+            <button onclick="closeRsvpModal()"
+                class="absolute top-5 right-5 text-on-surface-variant hover:text-primary p-1.5 rounded-full hover:bg-surface-variant/50 transition-colors">
+                <span class="material-symbols-outlined text-2xl">close</span>
+            </button>
+            <div class="flex items-center gap-3 mb-4 text-primary">
+                <span class="material-symbols-outlined text-3xl animate-bounce">celebration</span>
+                <h3 class="font-headline-md text-primary text-xl md:text-2xl font-bold">Xác Nhận Tham Gia</h3>
+            </div>
+            <p class="font-body-md text-on-surface-variant text-sm mb-6">Sự hiện diện của bạn là niềm vinh hạnh lớn nhất
+                của Hương cùng gia đình!</p>
+
+            <form id="rsvp-form" onsubmit="submitRsvp(event)" class="space-y-4 text-left">
+                <div>
+                    <label
+                        class="block font-label-caps text-xs text-primary font-semibold tracking-wider uppercase mb-1.5">Tên
+                        của bạn *</label>
+                    <input type="text" id="rsvp-name" required placeholder="Nhập tên của bạn để xác nhận tham gia..."
+                        class="w-full px-4 py-2.5 rounded-xl border border-outline-variant/40 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all font-body-md text-sm bg-white" />
+                </div>
+                <div class="pt-2 flex gap-3">
+                    <button type="button" onclick="closeRsvpModal()"
+                        class="flex-1 py-2.5 px-4 rounded-full border border-outline-variant/50 text-on-surface-variant font-medium text-sm hover:bg-surface-variant/30 transition-all">Hủy</button>
+                    <button type="submit"
+                        class="flex-1 py-2.5 px-4 rounded-full bg-primary text-white font-semibold text-sm hover:bg-primary/90 shadow-md transition-all inline-flex items-center justify-center gap-1.5">
+                        <span class="material-symbols-outlined text-base">check_circle</span> Xác Nhận
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Toast Notification -->
+    <div id="toast-notify"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[150] bg-primary text-white px-6 py-3.5 rounded-full shadow-2xl flex items-center gap-3 opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4">
+        <span class="material-symbols-outlined text-emerald-400 text-xl">check_circle</span>
+        <span id="toast-message" class="font-body-md text-sm font-medium">Đã lưu dữ liệu thành công!</span>
+    </div>
+
+    <!-- Modal Cảm Ơn Sau Khi Gửi -->
+    <div id="thankyou-modal"
+        class="fixed inset-0 z-[160] bg-black/65 backdrop-blur-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4">
+        <div class="bg-white/95 backdrop-blur-md rounded-3xl p-8 md:p-10 max-w-md w-full shadow-2xl border border-white transform scale-95 transition-all duration-300 relative text-center">
+            <!-- Decorative Background Glow -->
+            <div class="absolute -top-10 -right-10 text-rose-300/30 pointer-events-none">
+                <span class="material-symbols-outlined text-[130px]">local_florist</span>
+            </div>
+            <!-- Floral / Celebration Badge -->
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-tr from-rose-100 via-pink-50 to-amber-50 border border-rose-200 text-rose-500 mb-5 shadow-lg relative">
+                <span id="thankyou-icon" class="material-symbols-outlined text-4xl animate-bounce">favorite</span>
+                <span class="absolute -top-1 -right-1 material-symbols-outlined text-amber-400 text-xl animate-spin" style="animation-duration: 4s;">sparkles</span>
+            </div>
+            
+            <h3 id="thankyou-title" class="font-headline-md text-primary text-2xl md:text-3xl font-bold mb-3">Chân Thành Cảm Ơn!</h3>
+            
+            <p id="thankyou-desc" class="font-body-md text-on-surface-variant text-base leading-relaxed mb-8">
+                Lời chúc ý nghĩa của bạn đã được gửi tới Hương. Sự quan tâm và yêu thương của bạn là món quà vô giá trong ngày vui trọng đại này!
+            </p>
+            
+            <button type="button" onclick="closeThankYouModal()" 
+                class="w-full py-3.5 px-6 rounded-full bg-gradient-to-r from-rose-500 via-pink-500 to-primary text-white font-headline-sm text-sm font-semibold hover:opacity-95 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all inline-flex items-center justify-center gap-2 cursor-pointer">
+                <span class="material-symbols-outlined text-lg">check</span>
+                <span>Hoàn Tất</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts for Modals & JSON File Export -->
+    <script>
+        function openWishModal() {
+            const modal = document.getElementById('wish-modal');
+            const box = modal.querySelector('div');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-95');
+            box.classList.add('scale-100');
+        }
+        function closeWishModal() {
+            const modal = document.getElementById('wish-modal');
+            const box = modal.querySelector('div');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-100');
+            box.classList.add('scale-95');
+            document.getElementById('wish-form').reset();
+        }
+
+        function openRsvpModal() {
+            const modal = document.getElementById('rsvp-modal');
+            const box = modal.querySelector('div');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-95');
+            box.classList.add('scale-100');
+        }
+        function closeRsvpModal() {
+            const modal = document.getElementById('rsvp-modal');
+            const box = modal.querySelector('div');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-100');
+            box.classList.add('scale-95');
+            document.getElementById('rsvp-form').reset();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast-notify');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            }, 4000);
+        }
+
+        function openThankYouModal(type, name) {
+            const modal = document.getElementById('thankyou-modal');
+            const box = modal.querySelector('div');
+            const title = document.getElementById('thankyou-title');
+            const desc = document.getElementById('thankyou-desc');
+            const icon = document.getElementById('thankyou-icon');
+
+            if (type === 'wish') {
+                icon.textContent = 'favorite';
+                icon.className = 'material-symbols-outlined text-4xl animate-pulse text-rose-500';
+                title.textContent = 'Chân Thành Cảm Ơn ' + name + '!';
+                desc.textContent = 'Lời chúc ý nghĩa của bạn đã được gửi tới Hương. Sự quan tâm và yêu thương của bạn là món quà vô giá trong ngày vui trọng đại này!';
+            } else {
+                icon.textContent = 'celebration';
+                icon.className = 'material-symbols-outlined text-4xl animate-bounce text-primary';
+                title.textContent = 'Cảm Ơn ' + name + ' Đã Xác Nhận!';
+                desc.textContent = 'Xác nhận tham gia của bạn đã được ghi nhận. Hương và gia đình rất mong chờ và hân hạnh được đón tiếp bạn trong buổi lễ tốt nghiệp sắp tới!';
+            }
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-95');
+            box.classList.add('scale-100');
+        }
+
+        function closeThankYouModal() {
+            const modal = document.getElementById('thankyou-modal');
+            const box = modal.querySelector('div');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-100');
+            box.classList.add('scale-95');
+        }
+
+        // 1. CẤU HÌNH SHEETDB API URL (Dán link API SheetDB của bạn vào trong cặp ngoặc kép bên dưới)
+        // Ví dụ: const SHEETDB_API_URL = "https://sheetdb.io/api/v1/a1b2c3d4e5f6g";
+        const SHEETDB_API_URL = "https://sheetdb.io/api/v1/ultiudexdcowm";
+
+        function saveData(newEntry, storageKey) {
+            // Lưu vào localStorage
+            let currentList = [];
+            try {
+                const stored = localStorage.getItem(storageKey);
+                if (stored) currentList = JSON.parse(stored);
+            } catch (e) { }
+            currentList.push(newEntry);
+            localStorage.setItem(storageKey, JSON.stringify(currentList));
+
+            // Nếu đã cấu hình SheetDB API URL -> Tự động gửi lên Google Sheets
+            if (SHEETDB_API_URL.trim() !== "") {
+                fetch(SHEETDB_API_URL.trim(), {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        data: [newEntry]
+                    })
+                }).then(response => response.json())
+                    .then(data => console.log('Đã lưu vào Google Sheet thành công:', data))
+                    .catch(err => console.error('Lỗi khi gửi lên SheetDB:', err));
+            }
+        }
+
+        function submitWish(e) {
+            e.preventDefault();
+            const name = document.getElementById('wish-name').value.trim();
+            const message = document.getElementById('wish-message').value.trim();
+            if (!name || !message) return;
+
+            const entry = {
+                type: 'wish',
+                name: name,
+                message: message,
+                timestamp: new Date().toLocaleString('vi-VN')
+            };
+
+            saveData(entry, 'graduation_wishes');
+            closeWishModal();
+            openThankYouModal('wish', name);
+        }
+
+        function submitRsvp(e) {
+            e.preventDefault();
+            const name = document.getElementById('rsvp-name').value.trim();
+            if (!name) return;
+
+            const entry = {
+                type: 'rsvp',
+                name: name,
+                message: '',
+                timestamp: new Date().toLocaleString('vi-VN')
+            };
+
+            saveData(entry, 'graduation_rsvps');
+            closeRsvpModal();
+            openThankYouModal('rsvp', name);
+        }
+    </script>
 </body>
 
 </html>
